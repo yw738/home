@@ -1,18 +1,22 @@
 <script >
-import Card from './../components/Card.vue'
-
+import CardsBox from './../components/CardsBox.vue'
 import { defineComponent, ref } from 'vue'
+import DataArr from "./../assets/public.js"
 export default defineComponent({
   components: {
-    Card,
+    CardsBox,
   },
 
   setup() {
     return {
       selectedKeys: ref(['1']),
       collapsed: ref(false),
+      DataArr:DataArr
     }
   },
+  created(){
+    console.log(DataArr)
+  }
 })
 // defineProps({
 //   msg: String,
@@ -22,16 +26,9 @@ const count = ref(0)
 </script>
 
 <template>
+  <CardsBox v-for="(item,index) in DataArr" :index="index" :params="item" :key="index" />
 
-  <a-row :gutter="[16,8]">
-    <a-col :span="{xs:4,sm:6}" v-for="(item,index) in 6" :key="index">
-      <Card />
-    </a-col>
-  </a-row>
 </template>
 
 <style scoped lang="less">
-a {
-  color: #42b983;
-}
 </style>
