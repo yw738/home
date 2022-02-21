@@ -1,5 +1,6 @@
 /* 数据链接 */
 import toolLink from './link/tool.js'
+import happyLink from './link/happy.js'
 // const linkData1 = {
 //     name: '常用推荐',
 //     data: [{
@@ -11,4 +12,4 @@ import toolLink from './link/tool.js'
 //     }, ],
 // }
 
-export default [...toolLink]
+export default [...toolLink, ...happyLink]

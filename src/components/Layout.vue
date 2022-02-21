@@ -4,8 +4,8 @@
     <a-layout class="h100">
       <a-layout-sider v-model:collapsed="collapsed" width="218px" :trigger="null" collapsible>
         <div class="logo">
-          <img class="noView" v-if="collapsed" src="https://www.no404.vip/wp-content/uploads/2020/06/20200625140306012922.png">
-          <img class="view" v-else src="https://www.no404.vip/wp-content/uploads/2020/06/20200625135808529631.png">
+          <img class="noView" v-if="collapsed" :src="logo2">
+          <img class="view" v-else :src="logo">
         </div>
         <a-menu v-model:selectedKeys="selectedKeys" mode="inline">
           <a-menu-item v-for="(item,index) in menuList" @click="menuLinkFn(item,index)" :key="index">
@@ -45,6 +45,8 @@
  * 布局
  */
 import Home from './../pages/Home.vue'
+import logo from "./../assets/image/logo.png"
+import logo2 from "./../assets/image/logo2.png"
 import {
   UserOutlined,
   VideoCameraOutlined,
@@ -73,6 +75,12 @@ export default defineComponent({
     return {
       selectedKeys: ref(['1']),
       collapsed: ref(false),
+    }
+  },
+  data(){
+    return {
+      logo:logo,
+      logo2:logo2
     }
   },
   props: {

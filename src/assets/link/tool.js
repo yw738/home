@@ -2,6 +2,7 @@ import tsImg from './../image/ic-ts.png'
 import githubImg from './../image/github.png'
 import mdnImg from './../image/ic-mdn.png'
 import leetcodeImg from './../image/ic-leetcode.png'
+import vercelImg from './../image/vercel.png'
 
 /* 常用推荐 */
 const linkData = {
@@ -19,10 +20,58 @@ const linkData = {
             url: 'https://www.zhihu.com/',
         },
         {
-            title: 'LeetCode',
-            tips: '海量技术面试资源',
-            img: leetcodeImg,
-            url: 'https://leetcode-cn.com/',
+            title: 'Vercel',
+            tips: '最好用的网站托管服务平台',
+            img: 'https://avatars.githubusercontent.com/u/14985020?s=200&v=4',
+            url: 'https://vercel.com/',
+        },
+        {
+            title: 'Gitee',
+            tips: '码云，国内的开源社区~',
+            img: 'https://pic3.zhimg.com/v2-77b1a31dc62d9e00abd0ea6cdaba5c83_xll.jpg',
+            url: 'https://gitee.com/',
+        },
+    ],
+}
+
+/* 常用工具 */
+const toolLink = {
+    name: '常用工具',
+    data: [{
+            title: 'JSON在线校验格式化工具',
+            tips: 'JSON在线解析(双击自动格式化) ',
+            url: 'https://www.bejson.com/explore/index_new/',
+        },
+        {
+            title: '百度文库免费下载工具',
+            tips: '百度文库免费下载，可以导出包括ppt、word、excel等多个格式的文档资源。',
+            img: 'https://www.cxyhub.com/wp-content/uploads/2021/06/icon.png',
+            url: 'https://www.cxyhub.com/all/tool/2894/',
+        },
+        {
+            title: '在线进制转换',
+            tips: '支持在2~36进制之间进行任意转换，支持浮点型',
+            url: 'https://tool.oschina.net/hexconvert',
+        },
+        {
+            title: 'MD5加密工具',
+            tips: 'MD5加密是一种知名的不可逆的加密算法，在密码存储领域里被广泛使用',
+            url: 'https://tool.liumingye.cn/md5/',
+        },
+        {
+            title: '站长工具',
+            tips: '站长工具是站长的必备工具。经常上站长工具可以了解SEO数据变化。',
+            url: 'https://tool.chinaz.com/',
+        },
+        {
+            title: '图片压缩工具',
+            tips: '图片压缩工具',
+            url: 'https://www.bejson.com/ui/compress_img/',
+        },
+        {
+            title: '线上PS',
+            tips: 'Photopea | Online Photo Editor',
+            url: 'https://www.photopea.com/',
         },
     ],
 }
@@ -230,6 +279,12 @@ const webStudy = {
             tips: '英语听力精听、背单词',
             url: 'https://www.youzack.com/',
         },
+        {
+            title: 'LeetCode',
+            tips: '海量技术面试资源',
+            img: leetcodeImg,
+            url: 'https://leetcode-cn.com/',
+        },
     ],
 }
 
@@ -299,4 +354,32 @@ const webBuild = {
     ],
 }
 
-export default [linkData, cssLink, webLink, webStudy, webUi, webBuild, btLink]
+/* 面试相关 */
+const interview = {
+    name: '面试相关',
+    data: [{
+            title: 'Webpack',
+            tips: 'webpack 是一个现代 JavaScript 应用程序的静态模块打包器。',
+            img: 'https://avatars.githubusercontent.com/u/2105791?s=200&v=4',
+            url: 'https://www.webpackjs.com/',
+        },
+        {
+            title: 'Gulp',
+            tips: '用自动化构建工具增强你的工作流程',
+            img: 'https://avatars.githubusercontent.com/u/6200624?s=200&v=4',
+            url: 'https://www.gulpjs.com.cn/',
+        },
+    ],
+}
+
+export default [
+    linkData,
+    toolLink,
+    cssLink,
+    webLink,
+    webStudy,
+    webUi,
+    webBuild,
+    btLink,
+    interview,
+]
