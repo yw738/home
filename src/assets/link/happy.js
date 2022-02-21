@@ -191,6 +191,12 @@ const gameData = {
             tips: '愿神计算器',
             url: 'https://genshin.pub/',
         },
+        {
+            title: 'DNF计算器',
+            tags: ['小助手'],
+            tips: '计算装备伤害的工具~',
+            url: 'https://gitee.com/i_melon/DNFCalculating',
+        },
     ],
 }
 
