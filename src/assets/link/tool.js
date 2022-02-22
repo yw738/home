@@ -17,7 +17,7 @@ const linkData = {
             title: 'Github',
             tips: '世界上最大的代码托管平台',
             img: githubImg,
-            url: 'https://www.zhihu.com/',
+            url: 'https://github.com/',
         },
         {
             title: 'Vercel',
@@ -358,18 +358,11 @@ const webBuild = {
 const interview = {
     name: '面试相关',
     data: [{
-            title: 'Webpack',
-            tips: 'webpack 是一个现代 JavaScript 应用程序的静态模块打包器。',
-            img: 'https://avatars.githubusercontent.com/u/2105791?s=200&v=4',
-            url: 'https://www.webpackjs.com/',
-        },
-        {
-            title: 'Gulp',
-            tips: '用自动化构建工具增强你的工作流程',
-            img: 'https://avatars.githubusercontent.com/u/6200624?s=200&v=4',
-            url: 'https://www.gulpjs.com.cn/',
-        },
-    ],
+        title: '前端面试宝典',
+        tips: '前端面试基础知识、面试准备、面试题~',
+        img: 'https://gw.alipayobjects.com/zos/bmw-prod/501b3e5b-8924-45cd-95ee-4c7470570204.svg',
+        url: 'https://gxaedu.yuque.com/books/share/010981b8-858b-4b0a-96e9-e0bd7da1b0ed/ul5f8d',
+    }, ],
 }
 
 export default [
