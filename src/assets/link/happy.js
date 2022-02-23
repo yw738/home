@@ -197,6 +197,13 @@ const gameData = {
             tips: '计算装备伤害的工具~',
             url: 'https://gitee.com/i_melon/DNFCalculating',
         },
+        {
+            title: 'NGA',
+            tags: ['论坛'],
+            tips: 'NGA是国内专业的游戏玩家社区',
+            img: 'https://bkimg.cdn.bcebos.com/pic/37d12f2eb9389b50bc2659de8035e5dde6116e65?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg',
+            url: 'https://bbs.nga.cn/',
+        },
     ],
 }
 
