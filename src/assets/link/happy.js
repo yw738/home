@@ -204,6 +204,13 @@ const gameData = {
             img: 'https://bkimg.cdn.bcebos.com/pic/37d12f2eb9389b50bc2659de8035e5dde6116e65?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg',
             url: 'https://bbs.nga.cn/',
         },
+        {
+            title: '吾爱破解',
+            tags: ['论坛'],
+            tips: '吾爱破解论坛致力于软件安全与病毒分析的前沿',
+            url: 'https://www.52pojie.cn/',
+        },
+
     ],
 }
 
