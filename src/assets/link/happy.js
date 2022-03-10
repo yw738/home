@@ -206,11 +206,16 @@ const gameData = {
         },
         {
             title: '吾爱破解',
-            tags: ['论坛'],
-            tips: '吾爱破解论坛致力于软件安全与病毒分析的前沿',
+            tags: ['论坛', '下载'],
+            tips: '破解论坛，可以找一些资源',
             url: 'https://www.52pojie.cn/',
         },
-
+        {
+            title: 'switch520',
+            tags: ['论坛', '下载'],
+            tips: '下载pc、switch等学习版游戏~',
+            url: 'https://switch520.com/',
+        },
     ],
 }
 
