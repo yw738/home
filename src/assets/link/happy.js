@@ -7,26 +7,73 @@ import epicImg from './../image/epic.png'
 import originImg from './../image/origin.png'
 import ZLibraryImg from './../image/ZLibrary.png'
 import ebookImg from './../image/ebook.png'
+import ngaImg from './../image/nga.png'
 
 /* ACG社区 */
 const manhuaData = {
-    name: 'ACG社区',
-    data: [{
-            title: '哔哩哔哩',
-            tags: ['视频'],
-            tips: '- ( ゜- ゜)つロ 乾杯~ - ',
-            img: biliImg,
-            url: 'https://www.bilibili.com/',
-        },
-        {
-            title: 'AcFun',
-            tags: ['视频'],
-            tips: 'AcFun弹幕视频网，简称“A站”.',
-            img: 'https://ss0.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3831121515,712354576&fm=26&gp=0.jpg',
-            url: 'https://www.acfun.cn/',
-        },
+        name: 'ACG社区',
+        data: [{
+                title: '哔哩哔哩',
+                tags: ['视频'],
+                tips: '- ( ゜- ゜)つロ 乾杯~ - ',
+                img: biliImg,
+                url: 'https://www.bilibili.com/',
+            },
+            {
+                title: 'AcFun',
+                tags: ['视频'],
+                tips: 'AcFun弹幕视频网，简称“A站”.',
+                img: 'https://ss0.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3831121515,712354576&fm=26&gp=0.jpg',
+                url: 'https://www.acfun.cn/',
+            },
 
-        {
+            {
+                title: '腾讯漫画',
+                tags: ['漫画'],
+                tips: '最大正版动漫网站,连载众多原创国漫。',
+                img: txImg,
+                url: 'https://ac.qq.com/',
+            },
+            {
+                title: '哔哩哔哩漫画',
+                tags: ['漫画'],
+                tips: 'bilibili运营的正版漫画软件。',
+                img: biliMhImg,
+                url: 'https://manga.bilibili.com/',
+            },
+            {
+                title: '布卡漫画',
+                tags: ['漫画'],
+                tips: '老牌的漫画网站~',
+                img: 'https://pic3.zhimg.com/80/v2-3fbb52cc212493da2940c180228384b5_qhd.jpg',
+                url: 'http://www.buka.cn/',
+            },
+            {
+                // img: 'https://www.no404.vip/wp-content/uploads/2020/02/bt1207.png',
+                title: '土豪漫画',
+                tags: ['漫画', '免费'],
+                tips: '免费漫画在线看,各类日本漫画,国产漫画,韩国漫画等海内外知名漫画在线观看.',
+                url: 'https://www.tuho123.com/',
+            },
+            {
+                title: '琉璃神社',
+                tags: ['视频', 'H漫画'],
+                tips: '琉璃神社是一个分享最新最酷的ACG同人作品资讯社团,在这里你能找到很多欢乐。',
+                img: 'https://imgsa.baidu.com/forum/pic/item/aec379310a55b319e2125aeb46a98226cefc1740.jpg',
+                url: 'https://www.liuli.cz/wp/',
+            },
+            {
+                title: 'Mox.moe',
+                tags: ['漫画', '下载'],
+                tips: '高清Kindle格式漫画下载,支持推送漫画到kindle设备。',
+                url: 'https://mox.moe/',
+            },
+        ],
+    }
+    /* 我爱看视频 */
+const videoData = {
+    name: '看视频',
+    data: [{
             title: '樱花动漫',
             tags: ['视频'],
             tips: '有上万集高清晰画质的在线动漫',
@@ -34,52 +81,36 @@ const manhuaData = {
             url: 'http://www.imomoe.live/',
         },
         {
-            title: '腾讯漫画',
-            tags: ['漫画'],
-            tips: '最大正版动漫网站,连载众多原创国漫。',
-            img: txImg,
-            url: 'https://ac.qq.com/',
+            title: '真不卡(备用链接)',
+            tips: '真不卡地址发布页,超清无水印广告视频站~',
+            url: 'http://zhenbuka.fun/',
         },
         {
-            title: '哔哩哔哩漫画',
-            tags: ['漫画'],
-            tips: 'bilibili运营的正版漫画软件。',
-            img: biliMhImg,
-            url: 'https://manga.bilibili.com/',
+            title: '真不卡',
+            tips: '同上',
+            url: 'https://www.zhenbuka3.com/',
         },
         {
-            title: '布卡漫画',
-            tags: ['漫画'],
-            tips: '老牌的漫画网站~',
-            img: 'https://pic3.zhimg.com/80/v2-3fbb52cc212493da2940c180228384b5_qhd.jpg',
-            url: 'http://www.buka.cn/',
+            title: '低端影视(备用链接)',
+            tips: '强烈推荐,片源画质好，不会有任何枪版或者带韩文硬字幕之类的渣画质版本，不会使用删减版',
+            url: 'https://ddys.tv/',
         },
         {
-            // img: 'https://www.no404.vip/wp-content/uploads/2020/02/bt1207.png',
-            title: '土豪漫画',
-            tags: ['漫画', '免费'],
-            tips: '免费漫画在线看,各类日本漫画,国产漫画,韩国漫画等海内外知名漫画在线观看.',
-            url: 'https://www.tuho123.com/',
+            title: '低端影视',
+            tips: '同上',
+            url: 'https://ddrk.me/',
         },
         {
-            title: '琉璃神社',
-            tags: ['视频', 'H漫画'],
-            tips: '琉璃神社是一个分享最新最酷的ACG同人作品资讯社团,在这里你能找到很多欢乐。',
-            img: 'https://imgsa.baidu.com/forum/pic/item/aec379310a55b319e2125aeb46a98226cefc1740.jpg',
-            url: 'https://www.liuli.cz/wp/',
-        },
-        {
-            title: 'Mox.moe',
-            tags: ['漫画', '下载'],
-            tips: '高清Kindle格式漫画下载,支持推送漫画到kindle设备。',
-            url: 'https://mox.moe/',
+            title: '星辰影院',
+            tips: '普普通通的看视频网站~',
+            url: 'http://www.xzsfdc.com/',
         },
     ],
 }
 
 /* 音乐相关 */
 const musicData = {
-    name: '音乐相关',
+    name: '听音乐',
     data: [{
             img: 'https://bizaladdin-image.baidu.com/0/pic/1455484060_685827087_-310145699.jpg',
             title: '网易云',
@@ -201,7 +232,7 @@ const gameData = {
             title: 'NGA',
             tags: ['论坛'],
             tips: 'NGA是国内专业的游戏玩家社区',
-            img: 'https://bkimg.cdn.bcebos.com/pic/37d12f2eb9389b50bc2659de8035e5dde6116e65?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg',
+            img: ngaImg,
             url: 'https://bbs.nga.cn/',
         },
         {
@@ -216,7 +247,14 @@ const gameData = {
             tips: '下载pc、switch等学习版游戏~',
             url: 'https://switch520.com/',
         },
+        {
+            title: 'rutracker',
+            tags: ['下载'],
+            tips: '直达网盘链接,获取rutracker的操作文档',
+            url: 'https://pan.baidu.com/s/1pRfuzZIaWBex3a8J6z3LCA?pwd=bnx8',
+        },
+        // 链接: https://pan.baidu.com/s/1pRfuzZIaWBex3a8J6z3LCA?pwd=bnx8 提取码: bnx8 复制这段内容后打开百度网盘手机App，操作更方便哦
     ],
 }
 
-export default [manhuaData, musicData, bookData, gameData]
+export default [manhuaData, videoData, musicData, bookData, gameData]

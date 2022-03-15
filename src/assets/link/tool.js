@@ -2,12 +2,20 @@ import tsImg from './../image/ic-ts.png'
 import githubImg from './../image/github.png'
 import mdnImg from './../image/ic-mdn.png'
 import leetcodeImg from './../image/ic-leetcode.png'
-import vercelImg from './../image/vercel.png'
+import JPEGImagerlImg from './../image/JPEGImager.png'
+import clogImg from './../image/clog.png'
+import psImg from './../image/ps.png'
 
 /* 常用推荐 */
 const linkData = {
     name: '常用推荐',
     data: [{
+            title: 'Colg',
+            tips: '中国的网游类综合站点',
+            img: clogImg,
+            url: 'https://bbs.colg.cn/forum.php',
+        },
+        {
             title: '知乎',
             tips: '高质量问答社区',
             img: 'https://imgsrc.baidu.com/forum/pic/item/6709c93d70cf3bc71923c096d200baa1cd112aac.jpg',
@@ -34,12 +42,15 @@ const linkData = {
     ],
 }
 
+import zzgjImg from './../image/zzgj.png'
+
 /* 常用工具 */
 const toolLink = {
     name: '常用工具',
     data: [{
             title: 'JSON在线校验格式化工具',
             tips: 'JSON在线解析(双击自动格式化) ',
+            img: JPEGImagerlImg,
             url: 'https://www.bejson.com/explore/index_new/',
         },
         {
@@ -61,16 +72,19 @@ const toolLink = {
         {
             title: '站长工具',
             tips: '站长工具是站长的必备工具。经常上站长工具可以了解SEO数据变化。',
+            img: zzgjImg,
             url: 'https://tool.chinaz.com/',
         },
         {
             title: '图片压缩工具',
             tips: '图片压缩工具',
+            img: JPEGImagerlImg,
             url: 'https://www.bejson.com/ui/compress_img/',
         },
         {
             title: '线上PS',
             tips: 'Photopea | Online Photo Editor',
+            img: psImg,
             url: 'https://www.photopea.com/',
         },
     ],
@@ -290,7 +304,7 @@ const webStudy = {
 
 /* 前端UI库 */
 const webUi = {
-    name: '常用UI库',
+    name: '前端UI库',
     data: [{
             title: 'Element-UI',
             tags: ['UI'],

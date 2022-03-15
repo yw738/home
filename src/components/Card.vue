@@ -35,9 +35,8 @@ export default defineComponent({
 
 <template>
   <div class="url-body">
-    <div class="url-content">
+    <div class="url-content" @click="openLink(item)">
       <div>
-        <!-- https://www.no404.vip/wp-content/uploads/2020/02/skrbt.png -->
         <img :src="item.img||defaultImg">
       </div>
       <div style=" width: calc(100% - 66px);">
