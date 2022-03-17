@@ -19,10 +19,10 @@ export default defineComponent({
           label: '首页',
           value: '',
         },
-        // {
-        //   label: '前端',
-        //   value: '',
-        // },
+        {
+          label: '博客',
+          href: 'https://miaoblog.vercel.app/public/js/',
+        },
       ],
       menuList: [],
     }
