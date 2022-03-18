@@ -270,11 +270,19 @@ const webLink = {
         },
     ],
 }
-
+import zkxgnImg from './../image/zkxgn.png'
 /* 学习 */
 const webStudy = {
     name: '学习',
     data: [{
+            title: '新概念每日一练',
+            tags: ['ZK'],
+            tips: '刷题',
+            img: zkxgnImg,
+            url: 'http://learn.lsyvip.com/',
+            // user:"513723199712185178"
+        },
+        {
             title: 'ES6 入门教程',
             tags: ['ES6'],
             tips: '全面介绍 ECMAScript 6 新引入的语法特性。',
