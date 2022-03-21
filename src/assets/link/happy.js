@@ -229,6 +229,12 @@ const gameData = {
             url: 'https://gitee.com/i_melon/DNFCalculating',
         },
         {
+            title: '纸娃娃系统',
+            tags: ['DNF'],
+            tips: 'DNF 纸娃娃时装模拟系统',
+            url: 'https://avatar.kritsu.net/#/',
+        },
+        {
             title: 'NGA',
             tags: ['论坛'],
             tips: 'NGA是国内专业的游戏玩家社区',
@@ -253,6 +259,7 @@ const gameData = {
             tips: '直达网盘链接,获取rutracker的操作文档',
             url: 'https://pan.baidu.com/s/1pRfuzZIaWBex3a8J6z3LCA?pwd=bnx8',
         },
+
         // 链接: https://pan.baidu.com/s/1pRfuzZIaWBex3a8J6z3LCA?pwd=bnx8 提取码: bnx8 复制这段内容后打开百度网盘手机App，操作更方便哦
     ],
 }
