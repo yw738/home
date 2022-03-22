@@ -87,6 +87,11 @@ const toolLink = {
             img: psImg,
             url: 'https://www.photopea.com/',
         },
+        {
+            title: 'PDF转换器',
+            tips: '线上支持Pdf转Word,Word转Pdf等功能。',
+            url: 'http://www.pdfdo.com/pdf-to-word.aspx',
+        },
     ],
 }
 
