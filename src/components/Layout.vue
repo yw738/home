@@ -45,8 +45,8 @@
  * 布局
  */
 import Home from './../pages/Home.vue'
-import logo from "./../assets/image/logo.png"
-import logo2 from "./../assets/image/logo2.png"
+import logo from './../assets/image/logo.png'
+import logo2 from './../assets/image/logo2.png'
 import {
   UserOutlined,
   VideoCameraOutlined,
@@ -74,13 +74,13 @@ export default defineComponent({
   setup() {
     return {
       selectedKeys: ref(['1']),
-      collapsed: ref(false),
+      collapsed: ref(window.innerWidth <= 1100 ? true : false),
     }
   },
-  data(){
+  data() {
     return {
-      logo:logo,
-      logo2:logo2
+      logo: logo,
+      logo2: logo2,
     }
   },
   props: {
@@ -99,7 +99,7 @@ export default defineComponent({
     /**
      * 侧边栏的点击事件
      * @param {string} index 定位的坐标
-    */
+     */
     menuLinkFn(item, index) {
       document.querySelector(`#scroll${index}`).scrollIntoView({
         behavior: 'smooth', // 定义动画过渡效果， "auto"或 "smooth" 之一。默认为 "auto"
@@ -110,15 +110,23 @@ export default defineComponent({
     /**
      * 顶部栏的点击事件
      * @param {object} item 定位的坐标
-    */
-    navClick(item){
-      if(item?.href){
-        window.open(item?.href);
+     */
+    navClick(item) {
+      if (item?.href) {
+        window.open(item?.href)
       }
     },
     // 搜索的回调
-    searchFn(){
+    searchFn() {
       console.log('点击搜索！')
+    },
+  },
+  created() {
+    // 优化侧边栏伸缩的效果
+    window.onresize = () => {
+      window.innerWidth <= 1100
+        ? (this.collapsed = true)
+        : (this.collapsed = false)
     }
   },
 })
