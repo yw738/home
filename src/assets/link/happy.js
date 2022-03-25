@@ -8,7 +8,7 @@ import originImg from './../image/origin.png'
 import ZLibraryImg from './../image/ZLibrary.png'
 import ebookImg from './../image/ebook.png'
 import ngaImg from './../image/nga.png'
-
+import logoMangabzImg from './../image/logo_mangabz.jpg'
 /* ACG社区 */
 const manhuaData = {
         name: 'ACG社区',
@@ -68,6 +68,14 @@ const manhuaData = {
                 tips: '高清Kindle格式漫画下载,支持推送漫画到kindle设备。',
                 url: 'https://mox.moe/',
             },
+            {
+                title: 'mangabz',
+                tags: ['漫画'],
+                tips: '免费的看漫画网站！',
+                img: logoMangabzImg,
+                url: 'http://www.mangabz.com/1216bz/',
+            },
+
         ],
     }
     /* 我爱看视频 */
