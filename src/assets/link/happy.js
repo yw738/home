@@ -157,6 +157,8 @@ const musicData = {
     ],
 }
 
+
+import zsklogoImg from './../image/zsklogo.png.jpg'
 /* 书籍相关 */
 const bookData = {
     name: '书籍相关',
@@ -179,7 +181,7 @@ const bookData = {
             title: '知识库',
             tags: ['下载'],
             tips: '收集了海量书籍资源的网站',
-            img: 'https://book.zhishikoo.com/wp-content/uploads/2019/09/logo.png',
+            img: zsklogoImg,
             url: 'https://book.zhishikoo.com/',
         },
 
