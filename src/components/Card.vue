@@ -54,7 +54,7 @@ export default defineComponent({
         <div class="togo text-center text-muted is-views">
           <a-tooltip placement="right">
             <template #title>
-              <span>直达</span>
+              <span>{{item.url}}</span>
             </template>
             <RightCircleOutlined @click="openLink(item)" style="color:#6c757d" />
           </a-tooltip>

@@ -5,6 +5,8 @@ import leetcodeImg from './../image/ic-leetcode.png'
 import JPEGImagerlImg from './../image/JPEGImager.png'
 import clogImg from './../image/clog.png'
 import psImg from './../image/ps.png'
+import menuicon from './menuicon.js'
+import tbImg from './../image/tb.png'
 
 /* 常用推荐 */
 const linkData = {
@@ -14,6 +16,12 @@ const linkData = {
             tips: '中国的网游类综合站点',
             img: clogImg,
             url: 'https://bbs.colg.cn/forum.php',
+        },
+        {
+            title: '贴吧',
+            tips: '百度贴吧，以兴趣主题聚合志同道合者的互动平台',
+            img: tbImg,
+            url: 'https://tieba.baidu.com/',
         },
         {
             title: '知乎',
@@ -43,11 +51,19 @@ const linkData = {
 }
 
 import zzgjImg from './../image/zzgj.png'
+import iocnfontImg from './../image/iocnfont.png'
 
 /* 常用工具 */
 const toolLink = {
     name: '常用工具',
+    icon: menuicon.toolIcon,
     data: [{
+            title: 'iconfont',
+            tips: '丰富的矢量图标库',
+            img: iocnfontImg,
+            url: 'https://www.iconfont.cn/',
+        },
+        {
             title: 'JSON在线校验格式化工具',
             tips: 'JSON在线解析(双击自动格式化) ',
             img: JPEGImagerlImg,
@@ -98,6 +114,7 @@ const toolLink = {
 /* 磁力搜索 */
 const btLink = {
     name: '磁力搜索',
+    icon: menuicon.btIcon,
     data: [{
             img: 'https://www.no404.vip/wp-content/uploads/2020/02/bt1207.png',
             title: 'BT1207',
@@ -123,6 +140,7 @@ const btLink = {
 /* 常用CSS工具 */
 const cssLink = {
     name: '常用CSS工具',
+    icon: menuicon.cssIcon,
     data: [{
             title: 'Animista',
             tips: '在线有大量CSS动画网络应用程序。',
@@ -161,6 +179,7 @@ const cssLink = {
 /* 常用库及框架 */
 const webLink = {
     name: '常用库及框架',
+    icon: menuicon.jsIcon,
     data: [{
             title: 'React',
             tags: ['框架'],
@@ -275,10 +294,12 @@ const webLink = {
         },
     ],
 }
+
 import zkxgnImg from './../image/zkxgn.png'
 /* 学习 */
 const webStudy = {
     name: '学习',
+    icon: menuicon.studyIcon,
     data: [{
             title: '新概念每日一练',
             tags: ['ZK'],
@@ -318,6 +339,7 @@ const webStudy = {
 /* 前端UI库 */
 const webUi = {
     name: '前端UI库',
+    icon: menuicon.uiIcon,
     data: [{
             title: 'Element-UI',
             tags: ['UI'],
@@ -366,6 +388,7 @@ const webUi = {
 /* 前端打包工具 */
 const webBuild = {
     name: '常用打包工具',
+    icon: menuicon.buildIcon,
     data: [{
             title: 'Webpack',
             tips: 'webpack 是一个现代 JavaScript 应用程序的静态模块打包器。',
@@ -384,6 +407,7 @@ const webBuild = {
 /* 面试相关 */
 const interview = {
     name: '面试相关',
+    icon: menuicon.interviewIcon,
     data: [{
         title: '前端面试宝典',
         tips: '前端面试基础知识、面试准备、面试题~',

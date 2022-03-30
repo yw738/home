@@ -3,18 +3,23 @@
   <div id="app">
     <a-layout class="h100">
       <a-layout-sider v-model:collapsed="collapsed" width="218px" :trigger="null" collapsible>
+        <!-- logo -->
         <div class="logo">
           <img class="noView" v-if="collapsed" :src="logo2">
           <img class="view" v-else :src="logo">
         </div>
+        <!-- menu -->
         <a-menu v-model:selectedKeys="selectedKeys" mode="inline">
           <a-menu-item v-for="(item,index) in menuList" @click="menuLinkFn(item,index)" :key="index">
-            <appstore-outlined />
+            <!-- 自定义 icon -->
+            <span v-if="item.icon" class="anticon anticon-appstore custom_icon" v-html="item.icon" />
+            <appstore-outlined v-else/>
             <span>{{item.label}}</span>
           </a-menu-item>
         </a-menu>
       </a-layout-sider>
       <a-layout>
+        <!-- header -->
         <a-layout-header style="background: #f9f9f9; padding: 0">
           <div class="headbox">
             <div class="header">
@@ -47,6 +52,7 @@
 import Home from './../pages/Home.vue'
 import logo from './../assets/image/logo.png'
 import logo2 from './../assets/image/logo2.png'
+
 import {
   UserOutlined,
   VideoCameraOutlined,
@@ -158,7 +164,9 @@ export default defineComponent({
 .ant-menu-title-content:hover {
   color: #f1404b !important;
   .icon {
-    background: #f1404b !important;
+    // background: #f1404b !important;
+    color: #f1404b !important;
+    fill: #f1404b !important;
   }
 }
 .ant-menu-title-content {
@@ -234,4 +242,19 @@ export default defineComponent({
     cursor: pointer;
   }
 }
+// -----------侧边栏icon 的样式----------
+.ant-tooltip-placement-right{
+  .icon{
+    fill: #fff !important;
+    width:14px;
+    height: 14px;
+  }
+}
+.custom_icon{
+  width: 14px;
+  .icon{
+    fill: #5a5a5a;
+  }
+}
+// ---------------------
 </style>

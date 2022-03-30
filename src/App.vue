@@ -32,6 +32,7 @@ export default defineComponent({
     this.menuList = DataArr.map((v, i) => ({
       label: v.name,
       name: (i + 1).toString(),
+      icon:v.icon||null
     }))
   },
   setup() {

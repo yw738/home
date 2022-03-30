@@ -1,3 +1,4 @@
+import menuicon from './menuicon.js'
 import biliImg from './../image/bilibili.png'
 import yinhuaImg from './../image/yinhua.png'
 import txImg from './../image/txmh.png'
@@ -9,78 +10,82 @@ import ZLibraryImg from './../image/ZLibrary.png'
 import ebookImg from './../image/ebook.png'
 import ngaImg from './../image/nga.png'
 import logoMangabzImg from './../image/logo_mangabz.jpg'
+
+
 /* ACG社区 */
 const manhuaData = {
-        name: 'ACG社区',
-        data: [{
-                title: '哔哩哔哩',
-                tags: ['视频'],
-                tips: '- ( ゜- ゜)つロ 乾杯~ - ',
-                img: biliImg,
-                url: 'https://www.bilibili.com/',
-            },
-            {
-                title: 'AcFun',
-                tags: ['视频'],
-                tips: 'AcFun弹幕视频网，简称“A站”.',
-                img: 'https://ss0.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3831121515,712354576&fm=26&gp=0.jpg',
-                url: 'https://www.acfun.cn/',
-            },
+    name: 'ACG社区',
+    icon: menuicon.manhuaIcon,
+    data: [{
+            title: '哔哩哔哩',
+            tags: ['视频'],
+            tips: '- ( ゜- ゜)つロ 乾杯~ - ',
+            img: biliImg,
+            url: 'https://www.bilibili.com/',
+        },
+        {
+            title: 'AcFun',
+            tags: ['视频'],
+            tips: 'AcFun弹幕视频网，简称“A站”.',
+            img: 'https://ss0.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3831121515,712354576&fm=26&gp=0.jpg',
+            url: 'https://www.acfun.cn/',
+        },
 
-            {
-                title: '腾讯漫画',
-                tags: ['漫画'],
-                tips: '最大正版动漫网站,连载众多原创国漫。',
-                img: txImg,
-                url: 'https://ac.qq.com/',
-            },
-            {
-                title: '哔哩哔哩漫画',
-                tags: ['漫画'],
-                tips: 'bilibili运营的正版漫画软件。',
-                img: biliMhImg,
-                url: 'https://manga.bilibili.com/',
-            },
-            {
-                title: '布卡漫画',
-                tags: ['漫画'],
-                tips: '老牌的漫画网站~',
-                img: 'https://pic3.zhimg.com/80/v2-3fbb52cc212493da2940c180228384b5_qhd.jpg',
-                url: 'http://www.buka.cn/',
-            },
-            {
-                // img: 'https://www.no404.vip/wp-content/uploads/2020/02/bt1207.png',
-                title: '土豪漫画',
-                tags: ['漫画', '免费'],
-                tips: '免费漫画在线看,各类日本漫画,国产漫画,韩国漫画等海内外知名漫画在线观看.',
-                url: 'https://www.tuho123.com/',
-            },
-            {
-                title: '琉璃神社',
-                tags: ['视频', 'H漫画'],
-                tips: '琉璃神社是一个分享最新最酷的ACG同人作品资讯社团,在这里你能找到很多欢乐。',
-                img: 'https://imgsa.baidu.com/forum/pic/item/aec379310a55b319e2125aeb46a98226cefc1740.jpg',
-                url: 'https://www.liuli.cz/wp/',
-            },
-            {
-                title: 'Mox.moe',
-                tags: ['漫画', '下载'],
-                tips: '高清Kindle格式漫画下载,支持推送漫画到kindle设备。',
-                url: 'https://mox.moe/',
-            },
-            {
-                title: 'mangabz',
-                tags: ['漫画'],
-                tips: '免费的看漫画网站！',
-                img: logoMangabzImg,
-                url: 'http://www.mangabz.com/1216bz/',
-            },
+        {
+            title: '腾讯漫画',
+            tags: ['漫画'],
+            tips: '最大正版动漫网站,连载众多原创国漫。',
+            img: txImg,
+            url: 'https://ac.qq.com/',
+        },
+        {
+            title: '哔哩哔哩漫画',
+            tags: ['漫画'],
+            tips: 'bilibili运营的正版漫画软件。',
+            img: biliMhImg,
+            url: 'https://manga.bilibili.com/',
+        },
+        {
+            title: '布卡漫画',
+            tags: ['漫画'],
+            tips: '老牌的漫画网站~',
+            img: 'https://pic3.zhimg.com/80/v2-3fbb52cc212493da2940c180228384b5_qhd.jpg',
+            url: 'http://www.buka.cn/',
+        },
+        {
+            // img: 'https://www.no404.vip/wp-content/uploads/2020/02/bt1207.png',
+            title: '土豪漫画',
+            tags: ['漫画', '免费'],
+            tips: '免费漫画在线看,各类日本漫画,国产漫画,韩国漫画等海内外知名漫画在线观看.',
+            url: 'https://www.tuho123.com/',
+        },
+        {
+            title: '琉璃神社',
+            tags: ['视频', 'H漫画'],
+            tips: '琉璃神社是一个分享最新最酷的ACG同人作品资讯社团,在这里你能找到很多欢乐。',
+            img: 'https://imgsa.baidu.com/forum/pic/item/aec379310a55b319e2125aeb46a98226cefc1740.jpg',
+            url: 'https://www.liuli.cz/wp/',
+        },
+        {
+            title: 'Mox.moe',
+            tags: ['漫画', '下载'],
+            tips: '高清Kindle格式漫画下载,支持推送漫画到kindle设备。',
+            url: 'https://mox.moe/',
+        },
+        {
+            title: 'mangabz',
+            tags: ['漫画'],
+            tips: '免费的看漫画网站！',
+            img: logoMangabzImg,
+            url: 'http://www.mangabz.com/1216bz/',
+        },
+    ],
+}
 
-        ],
-    }
-    /* 我爱看视频 */
+/* 我爱看视频 */
 const videoData = {
     name: '看视频',
+    icon: menuicon.videoIcon,
     data: [{
             title: '樱花动漫',
             tags: ['视频'],
@@ -119,6 +124,7 @@ const videoData = {
 /* 音乐相关 */
 const musicData = {
     name: '听音乐',
+    icon: menuicon.musicIcon,
     data: [{
             img: 'https://bizaladdin-image.baidu.com/0/pic/1455484060_685827087_-310145699.jpg',
             title: '网易云',
@@ -154,6 +160,7 @@ const musicData = {
 /* 书籍相关 */
 const bookData = {
     name: '书籍相关',
+    icon: menuicon.bookIcon,
     data: [{
             title: '鸠摩搜索',
             tags: ['下载'],
@@ -189,6 +196,7 @@ const bookData = {
 /* 游戏相关 */
 const gameData = {
     name: '游戏相关',
+    icon: menuicon.gameIcon,
     data: [{
             img: 'https://bizaladdin-image.baidu.com/0/pic/-389184942_-2058906930_854960486.jpg',
             title: 'Steam',
