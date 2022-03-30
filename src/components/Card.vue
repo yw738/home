@@ -110,9 +110,6 @@ a {
   }
   color: #282a2d;
   font-size: 14px;
-  > div:nth-of-type(2) {
-    // width: calc(100% - 66px);
-  }
   > div:nth-of-type(2) div {
     font-weight: bold;
   }
