@@ -11,7 +11,6 @@ import ebookImg from './../image/ebook.png'
 import ngaImg from './../image/nga.png'
 import logoMangabzImg from './../image/logo_mangabz.jpg'
 
-
 /* ACG社区 */
 const manhuaData = {
     name: 'ACG社区',
@@ -157,7 +156,6 @@ const musicData = {
     ],
 }
 
-
 import zsklogoImg from './../image/zsklogo.png.jpg'
 /* 书籍相关 */
 const bookData = {
@@ -200,6 +198,13 @@ const gameData = {
     name: '游戏相关',
     icon: menuicon.gameIcon,
     data: [{
+            title: '无名空岛',
+            tips: '无名空岛 | 一个与DNF有缘的小岛',
+            tags: ['DNF', '配装'],
+            img: clogImg,
+            url: 'https://www.skycity.top:8016/dictionary?from=toplink',
+        },
+        {
             img: 'https://bizaladdin-image.baidu.com/0/pic/-389184942_-2058906930_854960486.jpg',
             title: 'Steam',
             tips: 'Steam is the ultimate destination for playing',
