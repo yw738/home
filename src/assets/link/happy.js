@@ -156,7 +156,7 @@ const musicData = {
     ],
 }
 
-import zsklogoImg from './../image/zsklogo.png.jpg'
+import zsklogoImg from './../image/zsklogo.png'
 /* 书籍相关 */
 const bookData = {
     name: '书籍相关',
