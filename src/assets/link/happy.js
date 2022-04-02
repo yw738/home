@@ -201,7 +201,6 @@ const gameData = {
             title: '无名空岛',
             tips: '无名空岛 | 一个与DNF有缘的小岛',
             tags: ['DNF', '配装'],
-            img: clogImg,
             url: 'https://www.skycity.top:8016/dictionary?from=toplink',
         },
         {
