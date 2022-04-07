@@ -13,7 +13,7 @@
           <a-menu-item v-for="(item,index) in menuList" @click="menuLinkFn(item,index)" :key="index">
             <!-- 自定义 icon -->
             <span v-if="item.icon" class="anticon anticon-appstore custom_icon" v-html="item.icon" />
-            <appstore-outlined v-else/>
+            <appstore-outlined v-else />
             <span>{{item.label}}</span>
           </a-menu-item>
         </a-menu>
@@ -23,6 +23,7 @@
         <a-layout-header style="background: #f9f9f9; padding: 0">
           <div class="headbox">
             <div class="header">
+              <!-- 左侧菜单 -->
               <div>
                 <menu-unfold-outlined style="font-size:20px;margin-left:16px;" v-if="collapsed" class="trigger" @click="() => (collapsed = !collapsed)" />
                 <menu-fold-outlined style="font-size:20px;margin-left:16px;" height="20px" v-else class="trigger" @click="() => (collapsed = !collapsed)" />
@@ -31,8 +32,14 @@
                 <div v-for="(item,index) in navList" :key="index" @click="navClick(item)">{{item.label}}</div>
               </div>
             </div>
-            <div class="search" @click="searchFn">
-              <search-outlined />
+            <!-- 右侧按钮 -->
+            <div>
+              <div class="search">
+                <PrivedButton />
+              </div>
+              <div class="search" @click="searchFn">
+                <search-outlined />
+              </div>
             </div>
           </div>
 
@@ -52,7 +59,7 @@
 import Home from './../pages/Home.vue'
 import logo from './../assets/image/logo.png'
 import logo2 from './../assets/image/logo2.png'
-
+import PrivedButton from './PrivedButton.vue'
 import {
   UserOutlined,
   VideoCameraOutlined,
@@ -64,6 +71,7 @@ import {
   SearchOutlined,
 } from '@ant-design/icons-vue'
 import { defineComponent, ref } from 'vue'
+import { message } from 'ant-design-vue'
 export default defineComponent({
   components: {
     UserOutlined,
@@ -75,6 +83,7 @@ export default defineComponent({
     AppstoreOutlined,
     SearchOutlined,
     Home,
+    PrivedButton,
   },
 
   setup() {
@@ -124,7 +133,8 @@ export default defineComponent({
     },
     // 搜索的回调
     searchFn() {
-      console.log('点击搜索！')
+      // console.log('点击搜索！')
+      message.info('开发中~')
     },
   },
   created() {
@@ -243,16 +253,16 @@ export default defineComponent({
   }
 }
 // -----------侧边栏icon 的样式----------
-.ant-tooltip-placement-right{
-  .icon{
+.ant-tooltip-placement-right {
+  .icon {
     fill: #fff !important;
-    width:14px;
+    width: 14px;
     height: 14px;
   }
 }
-.custom_icon{
+.custom_icon {
   width: 14px;
-  .icon{
+  .icon {
     fill: #5a5a5a;
   }
 }

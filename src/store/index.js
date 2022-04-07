@@ -1,21 +1,18 @@
-import { createApp } from 'vue'
 import { createStore } from 'vuex'
-import App from './App.vue';
 // 创建一个新的 store 实例
-const store = createStore({
+export default createStore({
     state() {
         return {
-            count: 0
+            isPrivate: false, //是否为私密模式 ，开启隐藏菜单
         }
     },
     mutations: {
-        increment(state) {
-            state.count++
+        /**
+         * @param {object} state store 实例
+         * @param {boolean} boolean 传入的布尔值
+         */
+        setPrivate(state, boolean) {
+            state.isPrivate = boolean
         }
     }
 })
-
-const app = createApp(App)
-
-// 将 store 实例作为插件安装
-app.use(store)

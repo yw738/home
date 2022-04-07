@@ -5,6 +5,8 @@
 import Card from './Card.vue'
 import { TagOutlined } from '@ant-design/icons-vue'
 import { defineComponent, ref, defineProps } from 'vue'
+import { computed } from 'vue'
+import { useStore } from 'vuex'
 export default defineComponent({
   components: {
     Card,
@@ -12,7 +14,10 @@ export default defineComponent({
   },
 
   setup() {
-    return {}
+    const store = useStore()
+    return {
+      isPrivate: computed(() => store.state.isPrivate),//检测是否开启私密模式
+    }
   },
   props: {
     params: {
@@ -40,9 +45,12 @@ export default defineComponent({
       <div>{{params.name}}</div>
     </div>
     <a-row :gutter="[30,24]">
-      <a-col :xxl="4" :xl="6" :lg="8" :md="12" :sm="24" v-for="(item,index) in params.data" :key="index">
-        <Card style="width:100%" :tagName="params.name" :item="item" />
-      </a-col>
+      <template v-for="(item,index) in params.data" :key="index">
+        <!-- item.private => 是否隐藏该卡片，设为私密卡片 -->
+        <a-col :xxl="4" :xl="6" :lg="8" :md="12" :sm="24" v-if="isPrivate||!item.private">
+          <Card style="width:100%" :tagName="params.name" :item="item" />
+        </a-col>
+      </template>
     </a-row>
   </div>
 

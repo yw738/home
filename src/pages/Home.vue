@@ -1,7 +1,7 @@
 <script >
 import CardsBox from './../components/CardsBox.vue'
 import { defineComponent, ref } from 'vue'
-import DataArr from "./../assets/public.js"
+import DataArr from './../assets/public.js'
 export default defineComponent({
   components: {
     CardsBox,
@@ -11,12 +11,10 @@ export default defineComponent({
     return {
       selectedKeys: ref(['1']),
       collapsed: ref(false),
-      DataArr:DataArr
+      DataArr: DataArr,
     }
   },
-  created(){
-    console.log(DataArr)
-  }
+  created() {},
 })
 // defineProps({
 //   msg: String,

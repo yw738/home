@@ -276,14 +276,21 @@ const gameData = {
             url: 'https://switch520.com/',
         },
         {
+            title: '东信卡盟',
+            tags: ['DNF'],
+            tips: '云上豆奶粉',
+            url: 'http://dxf.ryui.top/',
+            private: true
+        },
+        {
             title: 'rutracker',
             tags: ['下载'],
             tips: '直达网盘链接,获取rutracker的操作文档',
             url: 'https://pan.baidu.com/s/1pRfuzZIaWBex3a8J6z3LCA?pwd=bnx8',
         },
-
         // 链接: https://pan.baidu.com/s/1pRfuzZIaWBex3a8J6z3LCA?pwd=bnx8 提取码: bnx8 复制这段内容后打开百度网盘手机App，操作更方便哦
     ],
 }
+
 
 export default [manhuaData, videoData, musicData, bookData, gameData]
