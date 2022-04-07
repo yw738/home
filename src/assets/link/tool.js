@@ -7,6 +7,7 @@ import clogImg from './../image/clog.png'
 import psImg from './../image/ps.png'
 import menuicon from './menuicon.js'
 import tbImg from './../image/tb.png'
+import xinyueImg from './../image/xinyue.png'
 
 /* 常用推荐 */
 const linkData = {
@@ -16,6 +17,13 @@ const linkData = {
             tips: '中国的网游类综合站点',
             img: clogImg,
             url: 'https://bbs.colg.cn/forum.php',
+        },
+        {
+            title: '心悦俱乐部',
+            tips: '用钱创造快乐~',
+            tags: ['DNF'],
+            img: xinyueImg,
+            url: 'https://xinyue.qq.com/act/a20210317dnf/index_pc.html',
         },
         {
             title: '无名空岛',
