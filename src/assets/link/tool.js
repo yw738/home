@@ -73,7 +73,7 @@ const linkData = {
         {
             title: '漫画站',
             tips: '个人看漫画的网站~',
-            url: 'https://mh-psi.vercel.app/#/list',
+            url: 'https://mh-psi.vercel.app/',
             // private: true
         },
     ],
