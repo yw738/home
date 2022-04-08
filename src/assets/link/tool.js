@@ -8,6 +8,7 @@ import psImg from './../image/ps.png'
 import menuicon from './menuicon.js'
 import tbImg from './../image/tb.png'
 import xinyueImg from './../image/xinyue.png'
+import ylsImg from './../image/yls.png'
 
 /* 常用推荐 */
 const linkData = {
@@ -61,6 +62,13 @@ const linkData = {
             tips: '码云，国内的开源社区~',
             img: 'https://pic3.zhimg.com/v2-77b1a31dc62d9e00abd0ea6cdaba5c83_xll.jpg',
             url: 'https://gitee.com/',
+        },
+        {
+            title: '羊羊&&缪崽',
+            tips: '七夕纪念网站，记录羊羊和缪崽在一起的时间~',
+            img: ylsImg,
+            url: 'https://ylsandmls.vercel.app/',
+            private: true
         },
     ],
 }
