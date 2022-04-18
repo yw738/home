@@ -335,7 +335,6 @@ const webStudy = {
             tips: '刷题',
             img: zkxgnImg,
             url: 'http://learn.lsyvip.com/',
-            // user:"513723199712185178"
         },
         {
             title: 'ES6 入门教程',
