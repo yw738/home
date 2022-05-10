@@ -4,13 +4,13 @@
     <a-layout class="h100">
       <a-layout-sider v-model:collapsed="collapsed" width="218px" :trigger="null" collapsible>
         <!-- logo -->
-        <div class="logo">
+        <div class="logo" @click="menuLinkFn(0)">
           <img class="noView" v-if="collapsed" :src="logo2">
           <img class="view" v-else :src="logo">
         </div>
         <!-- menu -->
         <a-menu v-model:selectedKeys="selectedKeys" mode="inline">
-          <a-menu-item v-for="(item,index) in menuList" @click="menuLinkFn(item,index)" :key="index">
+          <a-menu-item v-for="(item,index) in menuList" @click="menuLinkFn(index)" :key="index">
             <!-- 自定义 icon -->
             <span v-if="item.icon" class="anticon anticon-appstore custom_icon" v-html="item.icon" />
             <appstore-outlined v-else />
@@ -115,7 +115,7 @@ export default defineComponent({
      * 侧边栏的点击事件
      * @param {string} index 定位的坐标
      */
-    menuLinkFn(item, index) {
+    menuLinkFn(index) {
       document.querySelector(`#scroll${index}`).scrollIntoView({
         behavior: 'smooth', // 定义动画过渡效果， "auto"或 "smooth" 之一。默认为 "auto"
         // block: 'center', // 定义垂直方向的对齐， "start", "center", "end", 或 "nearest"之一。默认为 "start"
@@ -207,6 +207,7 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   .view {
     width: 180px;
     height: 40px;

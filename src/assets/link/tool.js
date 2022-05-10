@@ -388,7 +388,7 @@ const webUi = {
             tags: ['UI'],
             tips: '这里是 Ant Design 的 Vue 实现，开发和服务于企业级后台产品。',
             img: 'https://avatars.githubusercontent.com/u/32120805?s=200&v=4',
-            url: 'https://ant.design/docs/react/introduce-cn',
+            url: 'https://www.antdv.com/components/overview-cn/',
         },
         {
             title: 'Vant',

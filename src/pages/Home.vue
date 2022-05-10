@@ -25,7 +25,6 @@ const count = ref(0)
 
 <template>
   <CardsBox v-for="(item,index) in DataArr" :index="index" :params="item" :key="index" />
-
 </template>
 
 <style scoped lang="less">

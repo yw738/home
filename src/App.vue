@@ -56,9 +56,7 @@ export default defineComponent({
       }
     },
   },
-  mounted(){
-
-  },
+  mounted() {},
   setup() {
     return {}
   },
