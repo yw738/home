@@ -216,6 +216,7 @@ const gameData = {
             tips: '中国的单机游戏门户',
             tags: ['免费'],
             url: 'https://www.ali213.net/',
+            private: true
         },
         {
             img: 'https://imgsa.baidu.com/forum/pic/item/b90e7bec54e736d18efb66569a504fc2d4626980.jpg',
@@ -223,6 +224,7 @@ const gameData = {
             tips: '三大妈游戏网',
             tags: ['免费'],
             url: 'https://www.3dmgame.com/',
+            private: true
         },
         {
             title: 'Epic',
@@ -243,12 +245,14 @@ const gameData = {
             tags: ['小助手'],
             tips: '愿神计算器',
             url: 'https://genshin.pub/',
+            private: true
         },
         {
             title: 'DNF计算器',
             tags: ['小助手'],
             tips: '计算装备伤害的工具~',
             url: 'https://gitee.com/i_melon/DNFCalculating',
+            private: true
         },
         {
             title: '纸娃娃系统',
@@ -274,6 +278,7 @@ const gameData = {
             tags: ['论坛', '下载'],
             tips: '下载pc、switch等学习版游戏~',
             url: 'https://switch520.com/',
+            private: true
         },
         {
             title: '东信卡盟',
@@ -287,6 +292,7 @@ const gameData = {
             tags: ['下载'],
             tips: '直达网盘链接,获取rutracker的操作文档',
             url: 'https://pan.baidu.com/s/1pRfuzZIaWBex3a8J6z3LCA?pwd=bnx8',
+            private: true
         },
         // 链接: https://pan.baidu.com/s/1pRfuzZIaWBex3a8J6z3LCA?pwd=bnx8 提取码: bnx8 复制这段内容后打开百度网盘手机App，操作更方便哦
     ],
