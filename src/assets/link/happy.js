@@ -258,7 +258,7 @@ const gameData = {
             title: '纸娃娃系统',
             tags: ['DNF'],
             tips: 'DNF 纸娃娃时装模拟系统',
-            url: 'https://avatar.kritsu.net/#/',
+            url: 'https://davatar.gitee.io/',
         },
         {
             title: 'NGA',
