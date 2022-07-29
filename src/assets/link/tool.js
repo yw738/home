@@ -21,6 +21,12 @@ const linkData = {
             url: 'https://bbs.colg.cn/forum.php',
         },
         {
+            title: '日日煮',
+            tips: '日日煮是亚洲最大的美食信息服务平台和美食社区之一，提供丰富的食谱和美食视频；美食爱好者可以记录和分享他们的美食生活，一起打造极致生活。',
+            url: 'https://www.daydaycook.com.cn/daydaycook',
+        },
+
+        {
             title: '心悦俱乐部',
             tips: '用钱创造快乐~',
             tags: ['DNF'],
