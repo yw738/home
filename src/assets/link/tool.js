@@ -9,6 +9,7 @@ import menuicon from './menuicon.js'
 import tbImg from './../image/tb.png'
 import xinyueImg from './../image/xinyue.png'
 import ylsImg from './../image/yls.png'
+import qiyeImg from './../image/qiye.png'
 
 /* 常用推荐 */
 const linkData = {
@@ -76,6 +77,13 @@ const linkData = {
             url: 'https://mh-psi.vercel.app/',
             // private: true
         },
+        {
+            title: '国家企业信息公示平台',
+            tips: '企业信用信息 经营异常名录 严重违法失信名单',
+            img: qiyeImg,
+            url: 'https://www.gsxt.gov.cn/corp-query-homepage.html',
+        },
+
     ],
 }
 

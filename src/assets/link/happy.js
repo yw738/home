@@ -92,16 +92,16 @@ const videoData = {
             img: yinhuaImg,
             url: 'http://www.imomoe.live/',
         },
-        {
-            title: '真不卡(备用链接)',
-            tips: '真不卡地址发布页,超清无水印广告视频站~',
-            url: 'http://zhenbuka.fun/',
-        },
-        {
-            title: '真不卡',
-            tips: '同上',
-            url: 'https://www.zhenbuka3.com/',
-        },
+        // {
+        //     title: '真不卡(备用链接)',
+        //     tips: '真不卡地址发布页,超清无水印广告视频站~',
+        //     url: 'http://zhenbuka.fun/',
+        // },
+        // {
+        //     title: '真不卡',
+        //     tips: '同上',
+        //     url: 'https://www.zhenbuka3.com/',
+        // },
         {
             title: '低端影视(备用链接)',
             tips: '强烈推荐,片源画质好，不会有任何枪版或者带韩文硬字幕之类的渣画质版本，不会使用删减版',
@@ -245,20 +245,19 @@ const gameData = {
             tags: ['小助手'],
             tips: '愿神计算器',
             url: 'https://genshin.pub/',
-            private: true
+            // private: true
         },
-        {
-            title: 'DNF计算器',
-            tags: ['小助手'],
-            tips: '计算装备伤害的工具~',
-            url: 'https://gitee.com/i_melon/DNFCalculating',
-            private: true
-        },
+        // {
+        //     title: 'DNF计算器',
+        //     tags: ['小助手'],
+        //     tips: '计算装备伤害的工具~',
+        //     url: 'https://gitee.com/i_melon/DNFCalculating',
+        // },
         {
             title: '纸娃娃系统',
             tags: ['DNF'],
             tips: 'DNF 纸娃娃时装模拟系统',
-            url: 'https://davatar.gitee.io/',
+            url: 'https://avatar.kritsu.net/',
         },
         {
             title: 'NGA',
@@ -273,13 +272,7 @@ const gameData = {
             tips: '破解论坛，可以找一些资源',
             url: 'https://www.52pojie.cn/',
         },
-        {
-            title: 'switch520',
-            tags: ['论坛', '下载'],
-            tips: '下载pc、switch等学习版游戏~',
-            url: 'https://switch520.com/',
-            private: true
-        },
+
         {
             title: '东信卡盟',
             tags: ['DNF'],
@@ -294,9 +287,47 @@ const gameData = {
             url: 'https://pan.baidu.com/s/1pRfuzZIaWBex3a8J6z3LCA?pwd=bnx8',
             private: true
         },
-        // 链接: https://pan.baidu.com/s/1pRfuzZIaWBex3a8J6z3LCA?pwd=bnx8 提取码: bnx8 复制这段内容后打开百度网盘手机App，操作更方便哦
     ],
 }
 
 
-export default [manhuaData, videoData, musicData, bookData, gameData]
+import oldmanImg from './../image/oldman.png'
+import switchImg from './../image/switchLogo.png'
+
+const simulator = {
+    name: '模拟器',
+    icon: menuicon.gameIcon,
+    data: [{
+            title: 'GBA线上模拟器',
+            tags: ['GBA'],
+            tips: '同人作品，网页版的模拟器，可以玩GBA游戏。',
+            img: '',
+            url: 'https://gba.44670.org/'
+        },
+        {
+            title: 'switch520',
+            tags: ['switch', '下载'],
+            tips: '下载pc、switch等学习版游戏~',
+            img: switchImg,
+            url: 'https://switch520.com/',
+        },
+        {
+            title: '老男人游戏网',
+            tags: ['下载'],
+            tips: '老游戏下载库，包含GBA、PSP、NDS等游戏资源。',
+            img: oldmanImg,
+            url: 'https://www.oldmanemu.net/'
+        },
+        {
+            title: '老男人游戏网配套论坛',
+            tags: ['论坛'],
+            tips: '这是资源站 | 老男人游戏网 的配套论坛',
+            img: oldmanImg,
+            url: 'https://bbs.oldmanemu.net/'
+        },
+
+
+    ]
+}
+
+export default [manhuaData, videoData, musicData, bookData, simulator, gameData]
