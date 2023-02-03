@@ -241,11 +241,10 @@ const gameData = {
             url: 'https://www.origin.com/hkg/zh-tw/store',
         },
         {
-            title: '可利特调',
-            tags: ['小助手'],
-            tips: '愿神计算器',
-            url: 'https://genshin.pub/',
-            // private: true
+            title: 'dnf404',
+            tags: ['补丁'],
+            tips: 'dnf',
+            url: 'http://dnf404.com/',
         },
         // {
         //     title: 'DNF计算器',
@@ -277,7 +276,7 @@ const gameData = {
             title: '东信卡盟',
             tags: ['DNF'],
             tips: '云上豆奶粉',
-            url: 'http://dxf.ryui.top/',
+            url: 'http://xh.513ka.cn/',
             private: true
         },
         {
