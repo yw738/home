@@ -1,20 +1,32 @@
-
 <template>
   <div id="app">
     <a-layout class="h100">
-      <a-layout-sider v-model:collapsed="collapsed" width="218px" :trigger="null" collapsible>
+      <a-layout-sider
+        v-model:collapsed="collapsed"
+        width="218px"
+        :trigger="null"
+        collapsible
+      >
         <!-- logo -->
         <div class="logo" @click="menuLinkFn(0)">
-          <img class="noView" v-if="collapsed" :src="logo2">
-          <img class="view" v-else :src="logo">
+          <img class="noView" v-if="collapsed" :src="logo2" />
+          <img class="view" v-else :src="logo" />
         </div>
         <!-- menu -->
         <a-menu v-model:selectedKeys="selectedKeys" mode="inline">
-          <a-menu-item v-for="(item,index) in menuList" @click="menuLinkFn(index)" :key="index">
+          <a-menu-item
+            v-for="(item, index) in menuList"
+            @click="menuLinkFn(index)"
+            :key="index"
+          >
             <!-- 自定义 icon -->
-            <span v-if="item.icon" class="anticon anticon-appstore custom_icon" v-html="item.icon" />
+            <span
+              v-if="item.icon"
+              class="anticon anticon-appstore custom_icon"
+              v-html="item.icon"
+            />
             <appstore-outlined v-else />
-            <span>{{item.label}}</span>
+            <span>{{ item.label }}</span>
           </a-menu-item>
         </a-menu>
       </a-layout-sider>
@@ -25,11 +37,28 @@
             <div class="header">
               <!-- 左侧菜单 -->
               <div>
-                <menu-unfold-outlined style="font-size:20px;margin-left:16px;" v-if="collapsed" class="trigger" @click="() => (collapsed = !collapsed)" />
-                <menu-fold-outlined style="font-size:20px;margin-left:16px;" height="20px" v-else class="trigger" @click="() => (collapsed = !collapsed)" />
+                <menu-unfold-outlined
+                  style="font-size: 20px; margin-left: 16px"
+                  v-if="collapsed"
+                  class="trigger"
+                  @click="() => (collapsed = !collapsed)"
+                />
+                <menu-fold-outlined
+                  style="font-size: 20px; margin-left: 16px"
+                  height="20px"
+                  v-else
+                  class="trigger"
+                  @click="() => (collapsed = !collapsed)"
+                />
               </div>
               <div class="menuItem">
-                <div v-for="(item,index) in navList" :key="index" @click="navClick(item)">{{item.label}}</div>
+                <div
+                  v-for="(item, index) in navList"
+                  :key="index"
+                  @click="navClick(item)"
+                >
+                  {{ item.label }}
+                </div>
               </div>
             </div>
             <!-- 右侧按钮 -->
@@ -42,9 +71,16 @@
               </div>
             </div>
           </div>
-
         </a-layout-header>
-        <a-layout-content :style="{ margin: 0, padding: '30px 30px 0', background: '#f9f9f9', minHeight: '280px',overflow: 'auto' }">
+        <a-layout-content
+          :style="{
+            margin: 0,
+            padding: '30px 30px 0',
+            background: '#f9f9f9',
+            minHeight: '280px',
+            overflow: 'auto',
+          }"
+        >
           <Home />
         </a-layout-content>
       </a-layout>
@@ -52,14 +88,14 @@
   </div>
 </template>
 
-<script >
+<script setup>
 /**
  * 布局
  */
-import Home from './../pages/Home.vue'
-import logo from './../assets/image/logo.png'
-import logo2 from './../assets/image/logo2.png'
-import PrivedButton from './PrivedButton.vue'
+import Home from "./../pages/Home.vue";
+import logo from "./../assets/image/logo.png";
+import logo2 from "./../assets/image/logo2.png";
+import PrivedButton from "./PrivedButton.vue";
 import {
   UserOutlined,
   VideoCameraOutlined,
@@ -69,83 +105,57 @@ import {
   DownOutlined,
   AppstoreOutlined,
   SearchOutlined,
-} from '@ant-design/icons-vue'
-import { defineComponent, ref } from 'vue'
-import { message } from 'ant-design-vue'
-export default defineComponent({
-  components: {
-    UserOutlined,
-    VideoCameraOutlined,
-    UploadOutlined,
-    MenuUnfoldOutlined,
-    MenuFoldOutlined,
-    DownOutlined,
-    AppstoreOutlined,
-    SearchOutlined,
-    Home,
-    PrivedButton,
+} from "@ant-design/icons-vue";
+import { defineComponent, ref, onBeforeMount } from "vue";
+import { message } from "ant-design-vue";
+onBeforeMount(() => {
+  // 优化侧边栏伸缩的效果
+  window.onresize = () => {
+    window.innerWidth <= 1100
+      ? (this.collapsed = true)
+      : (this.collapsed = false);
+  };
+});
+let selectedKeys = ref(["1"]);
+let collapsed = ref(window.innerWidth <= 1100 ? true : false);
+let props = defineProps({
+  // 侧边菜单
+  menuList: {
+    type: Array,
+    default: () => [],
   },
+  // 头部菜单
+  navList: {
+    type: Array,
+    default: () => [],
+  },
+});
 
-  setup() {
-    return {
-      selectedKeys: ref(['1']),
-      collapsed: ref(window.innerWidth <= 1100 ? true : false),
-    }
-  },
-  data() {
-    return {
-      logo: logo,
-      logo2: logo2,
-    }
-  },
-  props: {
-    // 侧边菜单
-    menuList: {
-      type: Array,
-      default: () => [],
-    },
-    // 头部菜单
-    navList: {
-      type: Array,
-      default: () => [],
-    },
-  },
-  methods: {
-    /**
-     * 侧边栏的点击事件
-     * @param {string} index 定位的坐标
-     */
-    menuLinkFn(index) {
-      document.querySelector(`#scroll${index}`).scrollIntoView({
-        behavior: 'smooth', // 定义动画过渡效果， "auto"或 "smooth" 之一。默认为 "auto"
-        // block: 'center', // 定义垂直方向的对齐， "start", "center", "end", 或 "nearest"之一。默认为 "start"
-        // inline: 'nearest', // 定义水平方向的对齐， "start", "center", "end", 或 "nearest"之一。默认为 "nearest"
-      })
-    },
-    /**
-     * 顶部栏的点击事件
-     * @param {object} item 定位的坐标
-     */
-    navClick(item) {
-      if (item?.href) {
-        window.open(item?.href)
-      }
-    },
-    // 搜索的回调
-    searchFn() {
-      // console.log('点击搜索！')
-      message.info('开发中~')
-    },
-  },
-  created() {
-    // 优化侧边栏伸缩的效果
-    window.onresize = () => {
-      window.innerWidth <= 1100
-        ? (this.collapsed = true)
-        : (this.collapsed = false)
-    }
-  },
-})
+/**
+ * 侧边栏的点击事件
+ * @param {string} index 定位的坐标
+ */
+let menuLinkFn = (index) => {
+  document.querySelector(`#scroll${index}`).scrollIntoView({
+    behavior: "smooth", // 定义动画过渡效果， "auto"或 "smooth" 之一。默认为 "auto"
+    // block: 'center', // 定义垂直方向的对齐， "start", "center", "end", 或 "nearest"之一。默认为 "start"
+    // inline: 'nearest', // 定义水平方向的对齐， "start", "center", "end", 或 "nearest"之一。默认为 "nearest"
+  });
+};
+/**
+ * 顶部栏的点击事件
+ * @param {object} item 定位的坐标
+ */
+let navClick = (item) => {
+  if (item?.href) {
+    window.open(item?.href);
+  }
+};
+// 搜索的回调
+let searchFn = () => {
+  // console.log('点击搜索！')
+  message.info("开发中~");
+};
 </script>
 <style lang="less">
 @lightBackground: #f9f9f9;

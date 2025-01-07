@@ -1,68 +1,59 @@
-<script >
-/**
- * 卡片
- */
-import { ref, defineComponent } from 'vue'
-import { RightCircleOutlined } from '@ant-design/icons-vue'
-import defaultImg from '../assets/image/default.png'
-export default defineComponent({
-  components: {
-    RightCircleOutlined,
-  },
-  data() {
-    return {
-      defaultImg: defaultImg,
-    }
-  },
-  props: {
-    tagName: {
-      type: String,
-      default: '',
-    },
-    item: {
-      type: Object,
-      default: () => ({}),
-    },
-  },
-  methods: {
-    openLink(item) {
-      let { url } = item
-      window.open(url)
-    },
-  },
-})
-</script>
-
 <template>
   <div class="url-body">
     <div class="url-content" @click="openLink(item)">
       <div>
-        <img :src="item.img||defaultImg">
+        <img :src="item.img || defaultImg" />
       </div>
-      <div style=" width: calc(100% - 66px);">
-        <div>{{item.title}}</div>
-        <p class="overflowClip_1">{{item.tips}}</p>
+      <div style="width: calc(100% - 66px)">
+        <div>{{ item.title }}</div>
+        <p class="overflowClip_1">{{ item.tips }}</p>
       </div>
     </div>
     <div class="url-goto">
       <div class="goto_box">
         <div class="tga text-xs py-1">
-          <span>{{tagName}}</span>
-          <span v-for="(v,i) in item.tags" :key="i">{{v}}</span>
+          <span>{{ tagName }}</span>
+          <span v-for="(v, i) in item.tags" :key="i">{{ v }}</span>
         </div>
 
         <div class="togo text-center text-muted is-views">
           <a-tooltip placement="right">
             <template #title>
-              <span>{{item.url}}</span>
+              <span>{{ item.url }}</span>
             </template>
-            <RightCircleOutlined @click="openLink(item)" style="color:#6c757d" />
+            <RightCircleOutlined
+              @click="openLink(item)"
+              style="color: #6c757d"
+            />
           </a-tooltip>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+/**
+ * 卡片
+ */
+import { ref, defineComponent } from "vue";
+import { RightCircleOutlined } from "@ant-design/icons-vue";
+import defaultImg from "../assets/image/default.png";
+let props = defineProps({
+  tagName: {
+    type: String,
+    default: "",
+  },
+  item: {
+    type: Object,
+    default: () => ({}),
+  },
+});
+let openLink = (item) => {
+  let { url } = item;
+  window.open(url);
+};
+</script>
 
 <style scoped lang="less">
 a {
