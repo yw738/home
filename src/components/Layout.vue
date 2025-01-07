@@ -176,7 +176,7 @@ let searchFn = () => {
   line-height: 74px !important;
   background: #fdfdfd !important;
 }
-/deep/ .left_menu {
+:deep(.left_menu) {
   .ant-menu {
     background: transparent !important;
     border: 0 !important;

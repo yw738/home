@@ -1,11 +1,11 @@
 <template>
-  <router-view></router-view>
+  <Layout :menuList="menuList" />
 </template>
 
 <script setup>
 //leftmenu #f9f9f9
-import Layout from "./components/Layout.vue";
-import DataArr from "./assets/public.js";
+import Layout from "@/components/Layout.vue";
+import DataArr from "@/assets/public.js";
 import { defineComponent, onBeforeMount, ref } from "vue";
 
 let menuList = ref([]);
@@ -39,5 +39,5 @@ let CloseWebPage = () => {
 };
 </script>
 <style lang="less">
-@import "./assets/common.css";
+@import "@/assets/common.css";
 </style>

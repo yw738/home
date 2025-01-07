@@ -5,11 +5,11 @@ import {
 } from "vue-router";
 
 const routes = [
-  // {
-  //   path: "/",
-  //   component: () => import("@/pages/Desktop/login/login.vue"),
-  //   children: [],
-  // },
+  {
+    path: "/",
+    component: () => import("@/pages/homepage.vue"),
+    children: [],
+  },
   // {
   //   path: "/priceiframe",
   //   component: () => import("@/pages/Desktop/iframe/price.vue"),
