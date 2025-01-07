@@ -5,12 +5,12 @@
         <template #title>{{ item.label }}</template>
         <a-menu-item
           v-for="(v, i) in item.children"
-          :key="i"
+          :key="v.key"
           @click="handClick(v)"
           >{{ v.label }}</a-menu-item
         >
       </a-sub-menu>
-      <a-menu-item :key="index" v-else @click="handClick(item)">
+      <a-menu-item :key="item.key" v-else @click="handClick(item)">
         {{ item.label }}
       </a-menu-item>
     </template>
@@ -24,11 +24,14 @@ const router = useRouter();
 let navList = [
   {
     label: "首页",
+    key: 1,
     value: "/home",
   },
   {
     label: "工具",
-    children: [{ label: "工具", url: "https://yw738.github.io/zxsj_tool/" }],
+    children: [
+      { label: "工具", key: 2, url: "https://yw738.github.io/zxsj_tool/" },
+    ],
   },
 ];
 let handClick = (item) => {
@@ -38,5 +41,5 @@ let handClick = (item) => {
     router.push(item.path);
   }
 };
-const current = ref(["mail"]);
+const current = ref([1]);
 </script>
