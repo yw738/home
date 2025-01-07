@@ -25,15 +25,14 @@
  * 隐私按钮
  */
 import { defineComponent, ref } from "vue";
-import { useStore } from "vuex";
 import { message } from "ant-design-vue";
 const checked = ref(false);
 const visible = ref(false);
 const value = ref("");
-const store = useStore();
 const pass = window.atob("dGltaXlhbmc="); //window.btoa("19980104")
+import { useUser } from "@/store/user.js";
+const user = useUser();
 
-let setPrivate = () => store.commit("setPrivate", true);
 const showModal = () => {
   value.value = "";
   visible.value = true;
@@ -47,7 +46,7 @@ const handleOk = () => {
   if (value.value == pass) {
     visible.value = false;
     message.success("开启隐藏菜单成功");
-    setPrivate();
+    user.setPrivate(true);
   } else {
     message.error("密码错误！");
   }

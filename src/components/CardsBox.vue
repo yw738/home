@@ -32,9 +32,9 @@ import Card from "./Card.vue";
 import { TagOutlined } from "@ant-design/icons-vue";
 import { defineComponent, ref, defineProps } from "vue";
 import { computed } from "vue";
-import { useStore } from "vuex";
-const store = useStore();
-let isPrivate = computed(() => store.state.isPrivate);
+import { useUser } from "@/store/user.js";
+const user = useUser();
+let isPrivate = computed(() => user.isPrivate);
 let props = defineProps({
   params: {
     type: Object,

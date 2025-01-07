@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <a-layout class="h100">
+      <!-- 左侧菜单 -->
       <a-layout-sider
         v-model:collapsed="collapsed"
         width="218px"
         :trigger="null"
         collapsible
+        class="left_menu"
       >
         <!-- logo -->
         <div class="logo" @click="menuLinkFn(0)">
@@ -30,6 +32,7 @@
           </a-menu-item>
         </a-menu>
       </a-layout-sider>
+      <!-- 顶部菜单 -->
       <a-layout>
         <!-- header -->
         <a-layout-header style="background: #f9f9f9; padding: 0">
@@ -51,7 +54,9 @@
                   @click="() => (collapsed = !collapsed)"
                 />
               </div>
-              <div class="menuItem">
+              <HeadMenu />
+              <!-- 顶部菜单 -->
+              <!-- <div class="menuItem">
                 <div
                   v-for="(item, index) in navList"
                   :key="index"
@@ -59,7 +64,7 @@
                 >
                   {{ item.label }}
                 </div>
-              </div>
+              </div> -->
             </div>
             <!-- 右侧按钮 -->
             <div>
@@ -96,6 +101,7 @@ import Home from "./../pages/Home.vue";
 import logo from "./../assets/image/logo.png";
 import logo2 from "./../assets/image/logo2.png";
 import PrivedButton from "./PrivedButton.vue";
+import HeadMenu from "./headMenu.vue";
 import {
   UserOutlined,
   VideoCameraOutlined,
@@ -157,7 +163,7 @@ let searchFn = () => {
   message.info("开发中~");
 };
 </script>
-<style lang="less">
+<style lang="less" scoped>
 @lightBackground: #f9f9f9;
 #app {
   color: #282a2d;
@@ -170,30 +176,33 @@ let searchFn = () => {
   line-height: 74px !important;
   background: #fdfdfd !important;
 }
-.ant-menu {
-  background: transparent !important;
-  border: 0 !important;
-}
-.ant-menu-item-selected {
-  color: #515c6b !important;
-  background-color: transparent !important;
-}
-.ant-menu-inline .ant-menu-item-selected::after {
-  opacity: 0 !important;
-}
-.ant-menu-title-content:hover {
-  color: #f1404b !important;
-  .icon {
-    // background: #f1404b !important;
+/deep/ .left_menu {
+  .ant-menu {
+    background: transparent !important;
+    border: 0 !important;
+  }
+  .ant-menu-item-selected {
+    color: #515c6b !important;
+    background-color: transparent !important;
+  }
+  .ant-menu-inline .ant-menu-item-selected::after {
+    opacity: 0 !important;
+  }
+  .ant-menu-title-content:hover {
     color: #f1404b !important;
-    fill: #f1404b !important;
+    .icon {
+      // background: #f1404b !important;
+      color: #f1404b !important;
+      fill: #f1404b !important;
+    }
+  }
+  .ant-menu-title-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
-.ant-menu-title-content {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
+
 .a-layout {
   background: #f9f9f9 !important;
 }

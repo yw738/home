@@ -1,5 +1,5 @@
 <template>
-  <Layout :menuList="menuList" :navList="navList" />
+  <Layout :menuList="menuList" />
 </template>
 
 <script setup>
@@ -8,12 +8,6 @@ import Layout from "./components/Layout.vue";
 import DataArr from "./assets/public.js";
 import { defineComponent, onBeforeMount, ref } from "vue";
 
-let navList = [
-  {
-    label: "首页",
-    value: "",
-  },
-];
 let menuList = ref([]);
 
 onBeforeMount(() => {

@@ -52,13 +52,13 @@ const manhuaData = {
       img: "https://pic3.zhimg.com/80/v2-3fbb52cc212493da2940c180228384b5_qhd.jpg",
       url: "http://www.buka.cn/",
     },
-    {
-      // img: 'https://www.no404.vip/wp-content/uploads/2020/02/bt1207.png',
-      title: "土豪漫画",
-      tags: ["漫画", "免费"],
-      tips: "免费漫画在线看,各类日本漫画,国产漫画,韩国漫画等海内外知名漫画在线观看.",
-      url: "https://www.tuho123.com/",
-    },
+    // {
+    //   // img: 'https://www.no404.vip/wp-content/uploads/2020/02/bt1207.png',
+    //   title: "土豪漫画",
+    //   tags: ["漫画", "免费"],
+    //   tips: "免费漫画在线看,各类日本漫画,国产漫画,韩国漫画等海内外知名漫画在线观看.",
+    //   url: "https://www.tuho123.com/",
+    // },
     {
       title: "琉璃神社",
       tags: ["视频", "H漫画"],
@@ -75,7 +75,7 @@ const manhuaData = {
     {
       title: "mangabz",
       tags: ["漫画"],
-      tips: "免费的看漫画网站！",
+      tips: "看漫画,需要梯子",
       img: logoMangabzImg,
       url: "http://www.mangabz.com/",
     },
