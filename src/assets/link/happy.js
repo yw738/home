@@ -14,7 +14,7 @@ import logoMangabzImg from "./../image/logo_mangabz.jpg";
 /* ACG社区 */
 const manhuaData = {
   name: "ACG社区",
-  icon: menuicon.manhuaIcon,
+  //icon: menuicon.manhuaIcon,
   data: [
     {
       title: "哔哩哔哩",
@@ -85,7 +85,7 @@ const manhuaData = {
 /* 我爱看视频 */
 const videoData = {
   name: "看视频",
-  icon: menuicon.videoIcon,
+  //icon: menuicon.videoIcon,
   data: [
     {
       title: "樱花动漫",
@@ -125,7 +125,7 @@ const videoData = {
 /* 音乐相关 */
 const musicData = {
   name: "听音乐",
-  icon: menuicon.musicIcon,
+  //icon: menuicon.musicIcon,
   data: [
     {
       img: "https://bizaladdin-image.baidu.com/0/pic/1455484060_685827087_-310145699.jpg",
@@ -163,7 +163,7 @@ import zsklogoImg from "./../image/zsklogo.png";
 /* 书籍相关 */
 const bookData = {
   name: "书籍相关",
-  icon: menuicon.bookIcon,
+  //icon: menuicon.bookIcon,
   data: [
     {
       title: "鸠摩搜索",
@@ -200,7 +200,7 @@ const bookData = {
 /* 游戏相关 */
 const gameData = {
   name: "游戏相关",
-  icon: menuicon.gameIcon,
+  //icon: menuicon.gameIcon,
   data: [
     {
       title: "无名空岛",
@@ -299,7 +299,7 @@ import switchImg from "./../image/switchLogo.png";
 
 const simulator = {
   name: "模拟器",
-  icon: menuicon.gameIcon,
+  //icon: menuicon.gameIcon,
   data: [
     {
       title: "GBA线上模拟器",

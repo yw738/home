@@ -110,7 +110,7 @@ import iocnfontImg from "./../image/iocnfont.png";
 /* 常用工具 */
 const toolLink = {
   name: "常用工具",
-  icon: menuicon.toolIcon,
+  //icon: menuicon.toolIcon,
   data: [
     {
       title: "iconfont",
@@ -180,7 +180,7 @@ const toolLink = {
 /* 磁力搜索 */
 const btLink = {
   name: "磁力搜索",
-  icon: menuicon.btIcon,
+  //icon: menuicon.btIcon,
   data: [
     {
       img: "https://www.no404.vip/wp-content/uploads/2020/02/bt1207.png",
@@ -207,7 +207,7 @@ const btLink = {
 /* 常用CSS工具 */
 const cssLink = {
   name: "常用CSS工具",
-  icon: menuicon.cssIcon,
+  //icon: menuicon.cssIcon,
   data: [
     {
       title: "Animista",
@@ -247,7 +247,7 @@ const cssLink = {
 /* 常用库及框架 */
 const webLink = {
   name: "常用库及框架",
-  icon: menuicon.jsIcon,
+  //icon: menuicon.jsIcon,
   data: [
     {
       title: "React",
@@ -368,7 +368,7 @@ import zkxgnImg from "./../image/zkxgn.png";
 /* 学习 */
 const webStudy = {
   name: "学习",
-  icon: menuicon.studyIcon,
+  //icon: menuicon.studyIcon,
   data: [
     {
       title: "新概念每日一练",
@@ -409,7 +409,7 @@ const webStudy = {
 /* 前端UI库 */
 const webUi = {
   name: "前端UI库",
-  icon: menuicon.uiIcon,
+  //icon: menuicon.uiIcon,
   data: [
     {
       title: "Element-UI",
@@ -459,7 +459,7 @@ const webUi = {
 /* 前端打包工具 */
 const webBuild = {
   name: "常用打包工具",
-  icon: menuicon.buildIcon,
+  //icon: menuicon.buildIcon,
   data: [
     {
       title: "Webpack",
@@ -479,7 +479,7 @@ const webBuild = {
 /* 面试相关 */
 const interview = {
   name: "面试相关",
-  icon: menuicon.interviewIcon,
+  //icon: menuicon.interviewIcon,
   data: [
     {
       title: "前端面试宝典",
@@ -491,7 +491,7 @@ const interview = {
 };
 
 const interview33 = {
-  icon: menuicon.interviewIcon,
+  //icon: menuicon.interviewIcon,
   name: "综合",
   children: [
     {
