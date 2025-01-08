@@ -1,12 +1,26 @@
 <template>
   <div class="container cus_tab">
     <div class="tabs">
-      <input type="radio" id="radio-1" name="tabs" checked />
+      <template v-for="(item, index) in headArr" :key="index">
+        <input
+          type="radio"
+          :id="`radio-${index + 1}`"
+          name="tabs"
+          :checked="active == index"
+        />
+        <label
+          class="tab"
+          :for="`radio-${index + 1}`"
+          @click="active == index"
+          >{{ item }}</label
+        >
+      </template>
+      <!-- <input type="radio" id="radio-1" name="tabs" checked />
       <label class="tab" for="radio-1">可以</label>
       <input type="radio" id="radio-2" name="tabs" />
       <label class="tab" for="radio-2">在页签右</label>
       <input type="radio" id="radio-3" name="tabs" />
-      <label class="tab" for="radio-3">边添加附</label>
+      <label class="tab" for="radio-3">边添加附</label> -->
       <span class="glider"></span>
     </div>
   </div>
@@ -16,18 +30,21 @@
 /**
  * 自定义 tab
  */
-import { ref, defineComponent } from "vue";
+import { ref, defineComponent, computed } from "vue";
 import { RightCircleOutlined } from "@ant-design/icons-vue";
 import defaultImg from "../assets/image/default.png";
 let props = defineProps({
   active: {
     type: Number,
-    default: "",
+    default: 0,
   },
   tabHead: {
     type: Array,
     default: () => [],
   },
+});
+let headArr = computed(() => {
+  return props.tabHead.map((v) => v.name);
 });
 let openLink = (item) => {
   let { url } = item;
