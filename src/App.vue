@@ -39,5 +39,5 @@ let CloseWebPage = () => {
 };
 </script>
 <style lang="less">
-@import "./assets/common.css";
+@import "@/assets/css/common.css";
 </style>
