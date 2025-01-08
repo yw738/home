@@ -490,8 +490,38 @@ const interview = {
   ],
 };
 
+const interview33 = {
+  icon: menuicon.interviewIcon,
+  children: [
+    {
+      name: "面试相关1",
+      data: [
+        {
+          title: "Gulp",
+          tips: "用自动化构建工具增强你的工作流程",
+          img: "https://avatars.githubusercontent.com/u/6200624?s=200&v=4",
+          url: "https://www.gulpjs.com.cn/",
+        },
+      ],
+    },
+    {
+      name: "面试相关2",
+      data: [
+        {
+          title: "Webpack",
+          tips: "webpack 是一个现代 JavaScript 应用程序的静态模块打包器。",
+          img: "https://avatars.githubusercontent.com/u/2105791?s=200&v=4",
+          url: "https://www.webpackjs.com/",
+        },
+      ],
+    },
+  ],
+};
+
 export default [
   linkData,
+  interview33,
+
   toolLink,
   cssLink,
   webLink,

@@ -1,26 +1,53 @@
 <template>
   <div class="choose_box" :id="`scroll${index}`">
-    <div class="head">
-      <div>
-        <TagOutlined />
+    <template v-if="params.children">
+      <div style="margin-bottom: 24px">
+        <Tabcom :tabHead="params.children" v-model:active="active" />
       </div>
-      <div>{{ params.name }}</div>
-    </div>
-    <a-row :gutter="[30, 24]">
-      <template v-for="(item, index) in params.data" :key="index">
-        <!-- item.private => 是否隐藏该卡片，设为私密卡片 -->
-        <a-col
-          :xxl="4"
-          :xl="6"
-          :lg="8"
-          :md="12"
-          :sm="24"
-          v-if="isPrivate || !item.private"
-        >
-          <Card style="width: 100%" :tagName="params.name" :item="item" />
-        </a-col>
+      <template v-for="(v, i) in params.children" :key="i">
+        <div v-show="active == i">
+          <a-row :gutter="[30, 24]">
+            <template v-for="(item, index) in v.data" :key="index">
+              <!-- item.private => 是否隐藏该卡片，设为私密卡片 -->
+              <a-col
+                :xxl="4"
+                :xl="6"
+                :lg="8"
+                :md="12"
+                :sm="24"
+                v-if="isPrivate || !item.private"
+              >
+                <Card style="width: 100%" :tagName="params.name" :item="item" />
+              </a-col>
+            </template>
+          </a-row>
+        </div>
       </template>
-    </a-row>
+    </template>
+
+    <template v-else>
+      <div class="head">
+        <div>
+          <TagOutlined />
+        </div>
+        <div>{{ params.name }}</div>
+      </div>
+      <a-row :gutter="[30, 24]">
+        <template v-for="(item, index) in params.data" :key="index">
+          <!-- item.private => 是否隐藏该卡片，设为私密卡片 -->
+          <a-col
+            :xxl="4"
+            :xl="6"
+            :lg="8"
+            :md="12"
+            :sm="24"
+            v-if="isPrivate || !item.private"
+          >
+            <Card style="width: 100%" :tagName="params.name" :item="item" />
+          </a-col>
+        </template>
+      </a-row>
+    </template>
   </div>
 </template>
 
@@ -30,8 +57,8 @@
  */
 import Card from "./Card.vue";
 import { TagOutlined } from "@ant-design/icons-vue";
-import { defineComponent, ref, defineProps } from "vue";
-import { computed } from "vue";
+import { defineComponent, ref, defineProps, computed } from "vue";
+import Tabcom from "@/components/Tabcom.vue";
 import { useUser } from "@/store/user.js";
 const user = useUser();
 let isPrivate = computed(() => user.isPrivate);
@@ -45,6 +72,8 @@ let props = defineProps({
     default: 0,
   },
 });
+
+let active = ref(0);
 </script>
 
 <style scoped lang="less">

@@ -114,16 +114,17 @@ import {
 } from "@ant-design/icons-vue";
 import { defineComponent, ref, onBeforeMount } from "vue";
 import { message } from "ant-design-vue";
+let collapsed = ref(window.innerWidth <= 1100 ? true : false);
+
 onBeforeMount(() => {
   // 优化侧边栏伸缩的效果
   window.onresize = () => {
     window.innerWidth <= 1100
-      ? (this.collapsed = true)
-      : (this.collapsed = false);
+      ? (collapsed.value = true)
+      : (collapsed.value = false);
   };
 });
 let selectedKeys = ref(["1"]);
-let collapsed = ref(window.innerWidth <= 1100 ? true : false);
 let props = defineProps({
   // 侧边菜单
   menuList: {
