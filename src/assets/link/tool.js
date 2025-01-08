@@ -492,6 +492,7 @@ const interview = {
 
 const interview33 = {
   icon: menuicon.interviewIcon,
+  name: "综合",
   children: [
     {
       name: "面试相关1",
@@ -521,7 +522,6 @@ const interview33 = {
 export default [
   linkData,
   interview33,
-
   toolLink,
   cssLink,
   webLink,

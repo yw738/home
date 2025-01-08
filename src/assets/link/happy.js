@@ -313,7 +313,7 @@ const simulator = {
       tags: ["switch", "下载"],
       tips: "下载pc、switch等学习版游戏~",
       img: switchImg,
-      url: "https://switch520.com/",
+      url: "https://www.gamer520.com/",
     },
     {
       title: "老男人游戏网",

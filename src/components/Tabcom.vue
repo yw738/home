@@ -1,6 +1,6 @@
 <template>
   <div class="container cus_tab">
-    <div class="tabs">
+    <div class="tabs" :style="{ width: getWidth() }">
       <template v-for="(item, index) in headArr" :key="index">
         <input
           type="radio"
@@ -11,7 +11,7 @@
         <label
           class="tab"
           :for="`radio-${index + 1}`"
-          @click="active == index"
+          @click="handClick(index)"
           >{{ item }}</label
         >
       </template>
@@ -46,9 +46,13 @@ let props = defineProps({
 let headArr = computed(() => {
   return props.tabHead.map((v) => v.name);
 });
-let openLink = (item) => {
-  let { url } = item;
-  window.open(url);
+let emit = defineEmits(["update:active"]);
+let handClick = (index) => {
+  emit("update:active", index);
+};
+let getWidth = () => {
+  let num = headArr?.value?.length || 1;
+  return 110 * num + 16 + "px";
 };
 </script>
 
@@ -80,8 +84,8 @@ let openLink = (item) => {
     box-shadow: 0px 0px 10px -6px #9e9e9e;
     padding: 8px;
     border-radius: 99px;
-    width: auto;
-    width: 346px;
+    // width: auto;
+    // width: 346px;
   }
 
   .tabs * {
