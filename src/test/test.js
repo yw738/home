@@ -1,5 +1,6 @@
-import DataArr from "@/assets/public.js";
-let list = DataArr;
+// import DataArr from "@/assets/public.js";
+
+let list = [];
 
 export let getUrlarr = () => {
   let aaa = [];
