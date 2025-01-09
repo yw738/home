@@ -2,6 +2,8 @@ import { defineStore } from "pinia";
 export const useUser = defineStore("user", {
   state: () => ({
     isPrivate: false, //是否为私密模式 ，开启隐藏菜单
+
+    searchKey: "",
   }),
 
   getters: {},

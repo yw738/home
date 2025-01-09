@@ -71,8 +71,14 @@
               <div class="search">
                 <PrivedButton />
               </div>
-              <div class="search" @click="searchFn">
-                <search-outlined />
+              <div class="search">
+                <!-- <search-outlined /> -->
+                <a-input-search
+                  v-model:value="searchKey"
+                  placeholder="input search text"
+                  enter-button
+                  @search="handSearch"
+                />
               </div>
             </div>
           </div>
@@ -115,7 +121,13 @@ import {
 import { defineComponent, ref, onBeforeMount } from "vue";
 import { message } from "ant-design-vue";
 let collapsed = ref(window.innerWidth <= 1100 ? true : false);
+import { useUser } from "@/store/user.js";
+const user = useUser();
 
+let searchKey = ref("");
+let handSearch = () => {
+  user.searchKey = searchKey.value;
+};
 onBeforeMount(() => {
   // 优化侧边栏伸缩的效果
   window.onresize = () => {
