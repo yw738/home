@@ -92,7 +92,6 @@ const videoData = {
       tips: "同上",
       url: "https://ddys.love/",
     },
-   
   ],
 };
 
@@ -361,6 +360,6 @@ export default [
   videoData,
   musicData,
   bookData,
-  simulator,
   gameData,
+  simulator,
 ];
