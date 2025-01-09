@@ -10,6 +10,7 @@ import ZLibraryImg from "./../image/ZLibrary.png";
 import ebookImg from "./../image/ebook.png";
 import ngaImg from "./../image/nga.png";
 import logoMangabzImg from "./../image/logo_mangabz.jpg";
+import clogImg from "./../image/clog.png";
 
 /* ACG社区 */
 const manhuaData = {
@@ -45,20 +46,7 @@ const manhuaData = {
       img: biliMhImg,
       url: "https://manga.bilibili.com/",
     },
-    {
-      title: "布卡漫画",
-      tags: ["漫画"],
-      tips: "老牌的漫画网站~",
-      img: "https://pic3.zhimg.com/80/v2-3fbb52cc212493da2940c180228384b5_qhd.jpg",
-      url: "http://www.buka.cn/",
-    },
-    // {
-    //   // img: 'https://www.no404.vip/wp-content/uploads/2020/02/bt1207.png',
-    //   title: "土豪漫画",
-    //   tags: ["漫画", "免费"],
-    //   tips: "免费漫画在线看,各类日本漫画,国产漫画,韩国漫画等海内外知名漫画在线观看.",
-    //   url: "https://www.tuho123.com/",
-    // },
+
     {
       title: "琉璃神社",
       tags: ["视频", "H漫画"],
@@ -94,31 +82,17 @@ const videoData = {
       img: yinhuaImg,
       url: "http://www.imomoe.live/",
     },
-    // {
-    //     title: '真不卡(备用链接)',
-    //     tips: '真不卡地址发布页,超清无水印广告视频站~',
-    //     url: 'http://zhenbuka.fun/',
-    // },
-    // {
-    //     title: '真不卡',
-    //     tips: '同上',
-    //     url: 'https://www.zhenbuka3.com/',
-    // },
     {
       title: "低端影视(备用链接)",
       tips: "强烈推荐,片源画质好，不会有任何枪版或者带韩文硬字幕之类的渣画质版本，不会使用删减版",
-      url: "https://ddys.tv/",
+      url: "https://ddys.mov/",
     },
     {
       title: "低端影视",
       tips: "同上",
-      url: "https://ddrk.me/",
+      url: "https://ddys.love/",
     },
-    {
-      title: "星辰影院",
-      tips: "普普通通的看视频网站~",
-      url: "http://www.xzsfdc.com/",
-    },
+   
   ],
 };
 
@@ -172,13 +146,13 @@ const bookData = {
       img: "https://www2.jiumodiary.com/images/front/eleps.png",
       url: "https://www.jiumodiary.com/",
     },
-    {
-      title: "Z-Library",
-      tags: ["下载"],
-      tips: "全球最大的数字图书馆",
-      img: ZLibraryImg,
-      url: "https://zh.booksc.xyz/",
-    },
+    // {
+    //   title: "Z-Library",
+    //   tags: ["下载"],
+    //   tips: "全球最大的数字图书馆",
+    //   img: ZLibraryImg,
+    //   url: "https://zh.booksc.xyz/",
+    // },
     {
       title: "知识库",
       tags: ["下载"],
@@ -187,13 +161,13 @@ const bookData = {
       url: "https://book.zhishikoo.com/",
     },
 
-    {
-      title: "Lorefree",
-      tags: ["下载"],
-      tips: "国内比较慢的图书网站~",
-      img: ebookImg,
-      url: "https://ebook2.lorefree.com/",
-    },
+    // {
+    //   title: "Lorefree",
+    //   tags: ["下载"],
+    //   tips: "国内比较慢的图书网站~",
+    //   img: ebookImg,
+    //   url: "https://ebook2.lorefree.com/",
+    // },
   ],
 };
 
@@ -364,7 +338,7 @@ const simulator = {
       img: "",
       url: "https://gba.44670.org/",
     },
-   
+
     {
       title: "老男人游戏网",
       tags: ["下载"],

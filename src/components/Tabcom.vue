@@ -6,22 +6,23 @@
           type="radio"
           :id="`radio-${index + 1}`"
           name="tabs"
-          :checked="active == index"
+          :checked="comActive == index"
         />
+
         <label
           class="tab"
+          :class="comActive == index ? 'active' : ''"
           :for="`radio-${index + 1}`"
           @click="handClick(index)"
           >{{ item }}</label
         >
       </template>
-      <!-- <input type="radio" id="radio-1" name="tabs" checked />
-      <label class="tab" for="radio-1">可以</label>
-      <input type="radio" id="radio-2" name="tabs" />
-      <label class="tab" for="radio-2">在页签右</label>
-      <input type="radio" id="radio-3" name="tabs" />
-      <label class="tab" for="radio-3">边添加附</label> -->
-      <span class="glider"></span>
+      <span
+        class="glider"
+        :style="{
+          transform: `translateX(${comActive * 100}%)`,
+        }"
+      ></span>
     </div>
   </div>
 </template>
@@ -30,9 +31,7 @@
 /**
  * 自定义 tab
  */
-import { ref, defineComponent, computed } from "vue";
-import { RightCircleOutlined } from "@ant-design/icons-vue";
-import defaultImg from "../assets/image/default.png";
+import { ref, defineComponent, computed, watch } from "vue";
 let props = defineProps({
   active: {
     type: Number,
@@ -43,13 +42,21 @@ let props = defineProps({
     default: () => [],
   },
 });
+let comActive = ref(0);
 let headArr = computed(() => {
   return props.tabHead.map((v) => v.name);
 });
 let emit = defineEmits(["update:active"]);
 let handClick = (index) => {
+  comActive.value = index;
   emit("update:active", index);
 };
+watch(
+  () => props.active,
+  () => {
+    comActive.value = props.active;
+  }
+);
 let getWidth = () => {
   let num = headArr?.value?.length || 1;
   return 110 * num + 16 + "px";
@@ -84,8 +91,6 @@ let getWidth = () => {
     box-shadow: 0px 0px 10px -6px #9e9e9e;
     padding: 8px;
     border-radius: 99px;
-    // width: auto;
-    // width: 346px;
   }
 
   .tabs * {
@@ -107,6 +112,9 @@ let getWidth = () => {
     border-radius: 99px;
     cursor: pointer;
     transition: color 0.15s ease-in;
+    &.active {
+      color: var(--primary-color);
+    }
   }
 
   .glider {
@@ -118,31 +126,6 @@ let getWidth = () => {
     z-index: 2;
     border-radius: 99px;
     transition: 0.25s ease-out;
-  }
-
-  input[type="radio"]:checked + label {
-    color: var(--primary-color);
-    // color: red;
-  }
-
-  input[id="radio-1"]:checked ~ .glider {
-    transform: translateX(0);
-  }
-
-  input[id="radio-2"]:checked ~ .glider {
-    transform: translateX(100%);
-  }
-
-  input[id="radio-3"]:checked ~ .glider {
-    transform: translateX(200%);
-  }
-
-  input[id="radio-4"]:checked ~ .glider {
-    transform: translateX(300%);
-  }
-
-  input[id="radio-5"]:checked ~ .glider {
-    transform: translateX(400%);
   }
 }
 </style>
