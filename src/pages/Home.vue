@@ -11,7 +11,6 @@
 import CardsBox from "@/components/CardsBox.vue";
 import { defineComponent, ref } from "vue";
 import DataArr from "@/assets/public.js";
-debugger
 </script>
 
 <style scoped lang="less"></style>

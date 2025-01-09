@@ -11,6 +11,10 @@ import ebookImg from "./../image/ebook.png";
 import ngaImg from "./../image/nga.png";
 import logoMangabzImg from "./../image/logo_mangabz.jpg";
 import clogImg from "./../image/clog.png";
+import oldmanImg from "./../image/oldman.png";
+import switchImg from "./../image/switchLogo.png";
+import zsklogoImg from "./../image/zsklogo.png";
+import xinyueImg from "./../image/xinyue.png";
 
 /* ACG社区 */
 const manhuaData = {
@@ -67,106 +71,352 @@ const manhuaData = {
       img: logoMangabzImg,
       url: "http://www.mangabz.com/",
     },
+    {
+      title: "包子漫画",
+      tags: ["漫画"],
+      url: "https://baozimh.org/",
+    },
   ],
 };
 
 /* 我爱看视频 */
 const videoData = {
-  name: "看视频",
+  name: "生活",
   icon: menuicon.videoIcon,
-  data: [
+  children: [
+    /* 音乐相关 */
     {
-      title: "樱花动漫",
-      tags: ["视频"],
-      tips: "有上万集高清晰画质的在线动漫",
-      img: yinhuaImg,
-      url: "http://www.imomoe.live/",
-    },
-    {
-      title: "低端影视(备用链接)",
-      tips: "强烈推荐,片源画质好，不会有任何枪版或者带韩文硬字幕之类的渣画质版本，不会使用删减版",
-      url: "https://ddys.mov/",
-    },
-    {
-      title: "低端影视",
-      tips: "同上",
-      url: "https://ddys.love/",
-    },
-  ],
-};
+      name: "听音乐",
+      icon: menuicon.musicIcon,
+      data: [
+        {
+          img: "https://bizaladdin-image.baidu.com/0/pic/1455484060_685827087_-310145699.jpg",
+          title: "网易云",
+          tips: "网易云音乐是一款专注于发现与分享的音乐产品",
+          url: "https://music.163.com/",
+        },
+        {
+          img: "https://bizaladdin-image.baidu.com/0/pic/2138999253_739995401_-1931658075.jpg",
+          title: "酷狗音乐",
+          tips: "酷狗音乐在线正版音乐网站,为您提供酷狗音乐播放器下载 、在线音乐试听下载,提供听书、长音频、电台、听小说和MV播放服务。",
+          url: "https://www.kugou.com/",
+        },
+        {
+          img: "https://zhengxin-pub.bj.bcebos.com/financepic/79f8460416371429d998df7c8088e879_fullsize.jpg",
+          title: "咪咕音乐",
+          tips: "咪咕音乐是一家音乐综合服务提供商。",
+          url: "https://music.migu.cn/v3",
+        },
 
-/* 音乐相关 */
-const musicData = {
-  name: "听音乐",
-  icon: menuicon.musicIcon,
-  data: [
-    {
-      img: "https://bizaladdin-image.baidu.com/0/pic/1455484060_685827087_-310145699.jpg",
-      title: "网易云",
-      tips: "网易云音乐是一款专注于发现与分享的音乐产品",
-      url: "https://music.163.com/",
+        {
+          title: "MyFreeMp3",
+          tips: "Free Music Downloads 320Kbps Songs MOBILE",
+          url: "http://tool.liumingye.cn/music/?page=searchPage",
+        },
+        {
+          title: "音乐直链搜索",
+          tips: "特制多站合一音乐搜索解决方案",
+          url: "https://music.liuzhijin.cn/",
+        },
+      ],
     },
+    // 影视
     {
-      img: "https://bizaladdin-image.baidu.com/0/pic/2138999253_739995401_-1931658075.jpg",
-      title: "酷狗音乐",
-      tips: "酷狗音乐在线正版音乐网站,为您提供酷狗音乐播放器下载 、在线音乐试听下载,提供听书、长音频、电台、听小说和MV播放服务。",
-      url: "https://www.kugou.com/",
+      name: "影视",
+      data: [
+        {
+          title: "樱花动漫",
+          tags: ["视频"],
+          tips: "有上万集高清晰画质的在线动漫",
+          img: yinhuaImg,
+          url: "http://www.imomoe.live/",
+        },
+        {
+          title: "低端影视(备用链接)",
+          tips: "强烈推荐,片源画质好，不会有任何枪版或者带韩文硬字幕之类的渣画质版本，不会使用删减版",
+          url: "https://ddys.mov/",
+        },
+        {
+          title: "低端影视",
+          tips: "同上",
+          url: "https://ddys.love/",
+        },
+        {
+          title: "茶杯狐",
+          tips: "查影视资源",
+          url: "https://cupfox.app/",
+        },
+        {
+          title: "不太灵影视",
+          tips: "电视上app收费的时候 他都有了",
+          url: "https://www.7bt0.com/",
+        },
+        {
+          title: "iqiyis影院",
+          tags: ["电影"],
+          tips: "iqiyis 影院每天搜集互联网最新电影和电视剧，为广大用户免费提供无广告在线观看电影和电视剧服务，及时收录最新、最热、最全的电影大片,高清正版免费看。",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/11/1732358228608.png",
+          url: "https://iqiyis.com",
+        },
+        {
+          title: "豌豆Pro",
+          tags: ["电影"],
+          tips: "【聚合搜索引擎】一个电影资源分享网站，旨在为用户提供高质量的影片资源。该网站的特点包括影片更新速度快、播放速度快、无广告以及提供高画质的影片",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1734243971629.png",
+          url: "https://wdoo.net",
+        },
+        {
+          title: "555 影视",
+          tags: ["电影"],
+          tips: "555 影视，最新 netflix 新剧新电影，全网高清影视免费看，秒拖秒播",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1734444017280.png",
+          url: "https://wuwuplus.shop",
+        },
+        {
+          title: "注视影视",
+          tags: ["电影"],
+          tips: "兴趣使然",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/1995b-www.lgyy.vip.png",
+          url: "https://gaze.run",
+        },
+        {
+          title: "新视觉影院",
+          tags: ["电影"],
+          tips: "推荐使用夸克4K，存网盘观看超清不卡",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/871ed-www.80yy3.com.png",
+          url: "https://www.80yy3.com",
+        },
+        {
+          title: "NO视频",
+          tags: ["电影"],
+          tips: "不负追剧好时光",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/18c45-www.novipnoad.net.png",
+          url: "https://www.novipnoad.net",
+        },
+        {
+          title: "在线之家",
+          tags: ["电影"],
+          tips: "努力打造在线之家为最好的海外热门影视剧在线观看站点!",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/d054b-www.zxzjhd.com.png",
+          url: "https://www.zxzjhd.com",
+        },
+        {
+          title: "电影兔",
+          tags: ["电影"],
+          tips: "电影兔 - 最新电影电视剧在线观看",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/b4d3d-www.dytdy.com.png",
+          url: "https://dianyingtu.com",
+        },
+        {
+          title: "热播之家",
+          tags: ["电影"],
+          tips: "高清影视在线",
+          img: "https://pic.imgdb.cn/item/661565e768eb935713aefa32.png",
+          url: "https://rebozj.pro",
+        },
+        {
+          title: "7080影视搜",
+          tags: ["电影"],
+          tips: "一个简单的影视搜索",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/3f050-7080.wang.png",
+          url: "https://7080.wang",
+        },
+        {
+          title: "xmxone",
+          tags: ["电影"],
+          tips: "xmxone聚合全网高清影视在线观看、下载，实时聚合全网优质影视资源，同时支持在线、下载和字幕。电影、电视剧、动漫、综艺、记录片应有尽有。",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/b937c-www.xmxone.cn.png",
+          url: "https://www.xmxone.cn",
+        },
+        {
+          title: "电影狗",
+          tags: ["电影"],
+          tips: "电影狗，专业的电影搜索引擎网站；用户通过电影名、演员、导演、电视剧、动漫等关键词进行搜索，直达电影资源站，让电影搜索更高效、更便捷、更精准！",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/6a91e-www.dianyinggou.com.png",
+          url: "https://www.dianyinggou.com",
+        },
+        {
+          title: "追影喵",
+          tags: ["电影"],
+          tips: "追影推荐",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/c7b79-zhuiyingmao2.com.png",
+          url: "https://zhuiyingmao5.com",
+        },
+        {
+          title: "影猫仓库",
+          tags: ["电影"],
+          tips: "免费观影第一站",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/b8ee4-ymck.pro.png",
+          url: "https://ymck.pro",
+        },
+        {
+          title: "影搜",
+          tags: ["电影"],
+          tips: "影视搜索-全网海量影片数据",
+          img: "https://pic.imgdb.cn/item/65f47e449f345e8d03dbb2fb.png",
+          url: "https://xn--p3tv7h.com",
+        },
+        {
+          title: "橘子动漫",
+          tags: ["电影"],
+          tips: "橘子动漫",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1734244334027.png",
+          url: "https://www.jzacg.com",
+        },
+        {
+          title: "NT动漫",
+          tags: ["电影"],
+          tips: "NT动漫，专注的动漫的网站，立志为广大动漫迷提供一个在线看动漫的好平台。",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1734244074622.png",
+          url: "http://www.ntdm9.com",
+        },
+        {
+          title: "搜片",
+          tags: ["电影"],
+          tips: "【聚合影搜搜素引擎】搜片.com 聚合全网影片，你想看的全都找得到！每天搜集最新电影、电视剧、在线观看网址、蓝光高清正版免费看！",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1734244001370.png",
+          url: "https://soupian.pro",
+        },
+        {
+          title: "电影猎手",
+          tags: ["电影"],
+          tips: "电影猎手 app，安卓 ios 一应俱全，独家线路，高清影视，永久免费不卡顿，还有积分福利",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1734444885897.png",
+          url: "https://dyls1.club",
+        },
+        {
+          title: "88影视",
+          tags: ["电影"],
+          tips: "88影视",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1734244492165.png",
+          url: "https://www.88tvs.cn",
+        },
+        {
+          title: "追影视频",
+          tags: ["电影"],
+          tips: "追影视频",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/07/1721887461024.png",
+          url: "https://app2.zhuiying.cyou",
+        },
+        {
+          title: "绝对影视",
+          tags: ["电影"],
+          tips: "每日提供最新鲜的电影，电视剧，动画更新，支持电脑和移动设备的超清画质在线观看影视剧体验",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1734244412374.png",
+          url: "https://www.jdys.art",
+        },
+        {
+          title: "柯南影视",
+          tags: ["电影"],
+          tips: "柯南影视",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1734244439062.png",
+          url: "https://www.knvod.com",
+        },
+        {
+          title: "美益达影视",
+          tags: ["电影"],
+          tips: "美益达影视提供最新最快的电影电视剧免费在线观看",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/08/1722658343711.png",
+          url: "https://www.myd04.com",
+        },
+        {
+          title: "麦田影院",
+          tags: ["电影"],
+          tips: "麦田影院",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/07/1721886997466.png",
+          url: "https://www.mtyy1.com",
+        },
+        {
+          title: "呵呵动漫",
+          tags: ["电影"],
+          tips: "免费高质量在线动漫网站！为动漫爱好者提供无与伦比的追番体验!标签：高清日漫,免费日漫,日漫在线观看,在线动漫",
+          img: "https://hehe.cc/app200.png",
+          url: "https://hehe.cc",
+        },
+        {
+          title: "LIBVIO影视",
+          tags: ["电影"],
+          tips: "LIBVIO影视",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/07/1721885787047.png",
+          url: "https://iioo.me",
+        },
+        {
+          title: "在线之家",
+          tags: ["电影"],
+          tips: "在线之家网址发布页,在线之家最新地址,在线之家网址多少",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/07/1721885552810.png",
+          url: "https://www.zxzj.site",
+        },
+        {
+          title: "侠客影视",
+          tags: ["电影"],
+          tips: "侠客影视",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2023/04/微信截图_20230403090445.png",
+          url: "http://xkys.link",
+        },
+        {
+          title: "No影视",
+          tags: ["电影"],
+          tips: "No影视",
+          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1733160360961.png",
+          url: "https://www.novipnoad.net",
+        },
+      ],
     },
+    // 图片
     {
-      img: "https://zhengxin-pub.bj.bcebos.com/financepic/79f8460416371429d998df7c8088e879_fullsize.jpg",
-      title: "咪咕音乐",
-      tips: "咪咕音乐是一家音乐综合服务提供商。",
-      url: "https://music.migu.cn/v3",
+      name: "图片",
+      icon: menuicon.musicIcon,
+      data: [
+        {
+          title: "3g壁纸",
+          tags: ["壁纸"],
+          tips: "壁纸网站",
+          url: "https://www.3gbizhi.com/",
+        },
+        {
+          title: "美图集",
+          tips: "壁纸网站",
+          url: "https://photo.ihansen.org/",
+        },
+      ],
     },
+    // 书籍相关
+    {
+      name: "书籍相关",
+      icon: menuicon.bookIcon,
+      data: [
+        {
+          title: "鸠摩搜索",
+          tags: ["下载"],
+          tips: "鸠摩图书下载~",
+          img: "https://www2.jiumodiary.com/images/front/eleps.png",
+          url: "https://www.jiumodiary.com/",
+        },
+        {
+          title: "Z-Library",
+          tags: ["下载"],
+          tips: "全球最大的数字图书馆",
+          img: ZLibraryImg,
+          url: "https://z-library.sk/",
+        },
+        {
+          title: "知识库",
+          tags: ["下载"],
+          tips: "收集了海量书籍资源的网站",
+          img: zsklogoImg,
+          url: "https://book.zhishikoo.com/",
+        },
 
-    {
-      title: "MyFreeMp3",
-      tips: "Free Music Downloads 320Kbps Songs MOBILE",
-      url: "http://tool.liumingye.cn/music/?page=searchPage",
+        // {
+        //   title: "Lorefree",
+        //   tags: ["下载"],
+        //   tips: "国内比较慢的图书网站~",
+        //   img: ebookImg,
+        //   url: "https://ebook2.lorefree.com/",
+        // },
+      ],
     },
-    {
-      title: "音乐直链搜索",
-      tips: "特制多站合一音乐搜索解决方案",
-      url: "https://music.liuzhijin.cn/",
-    },
-  ],
-};
-
-import zsklogoImg from "./../image/zsklogo.png";
-/* 书籍相关 */
-const bookData = {
-  name: "书籍相关",
-  icon: menuicon.bookIcon,
-  data: [
-    {
-      title: "鸠摩搜索",
-      tags: ["下载"],
-      tips: "鸠摩图书下载~",
-      img: "https://www2.jiumodiary.com/images/front/eleps.png",
-      url: "https://www.jiumodiary.com/",
-    },
-    // {
-    //   title: "Z-Library",
-    //   tags: ["下载"],
-    //   tips: "全球最大的数字图书馆",
-    //   img: ZLibraryImg,
-    //   url: "https://zh.booksc.xyz/",
-    // },
-    {
-      title: "知识库",
-      tags: ["下载"],
-      tips: "收集了海量书籍资源的网站",
-      img: zsklogoImg,
-      url: "https://book.zhishikoo.com/",
-    },
-
-    // {
-    //   title: "Lorefree",
-    //   tags: ["下载"],
-    //   tips: "国内比较慢的图书网站~",
-    //   img: ebookImg,
-    //   url: "https://ebook2.lorefree.com/",
-    // },
   ],
 };
 
@@ -239,6 +489,13 @@ const gameData = {
     {
       name: "DNF",
       data: [
+        {
+          title: "心悦俱乐部",
+          tips: "用钱创造快乐~",
+          tags: ["DNF"],
+          img: xinyueImg,
+          url: "https://xinyue.qq.com/act/a20210317dnf/index_pc.html",
+        },
         {
           title: "Colg",
           tips: "中国的网游类综合站点",
@@ -320,46 +577,51 @@ const gameData = {
         },
       ],
     },
-  ],
-};
-
-import oldmanImg from "./../image/oldman.png";
-import switchImg from "./../image/switchLogo.png";
-
-const simulator = {
-  name: "模拟器",
-  icon: menuicon.gameIcon,
-  data: [
+    // 模拟器
     {
-      title: "GBA线上模拟器",
-      tags: ["GBA"],
-      tips: "同人作品，网页版的模拟器，可以玩GBA游戏。",
-      img: "",
-      url: "https://gba.44670.org/",
-    },
+      name: "模拟器",
+      icon: menuicon.gameIcon,
+      data: [
+        {
+          title: "GBA线上模拟器",
+          tags: ["GBA"],
+          tips: "同人作品，网页版的模拟器，可以玩GBA游戏。",
+          img: "",
+          url: "https://gba.44670.org/",
+        },
 
-    {
-      title: "老男人游戏网",
-      tags: ["下载"],
-      tips: "老游戏下载库，包含GBA、PSP、NDS等游戏资源。",
-      img: oldmanImg,
-      url: "https://www.oldmanemu.net/",
-    },
-    {
-      title: "老男人游戏网配套论坛",
-      tags: ["论坛"],
-      tips: "这是资源站 | 老男人游戏网 的配套论坛",
-      img: oldmanImg,
-      url: "https://bbs.oldmanemu.net/",
+        {
+          title: "老男人游戏网",
+          tags: ["下载"],
+          tips: "老游戏下载库，包含GBA、PSP、NDS等游戏资源。",
+          img: oldmanImg,
+          url: "https://www.oldmanemu.net/",
+        },
+        {
+          title: "老男人游戏网配套论坛",
+          tags: ["论坛"],
+          tips: "这是资源站 | 老男人游戏网 的配套论坛",
+          img: oldmanImg,
+          url: "https://bbs.oldmanemu.net/",
+        },
+      ],
     },
   ],
 };
-
-export default [
-  manhuaData,
-  videoData,
-  musicData,
-  bookData,
-  gameData,
-  simulator,
-];
+const otherLink = {
+  icon: menuicon.interviewIcon,
+  name: "其他推荐",
+  children: [
+    {
+      name: "外链网站",
+      data: [
+        {
+          title: "Tuostudy",
+          tips: "其他导航站点",
+          url: "https://tuostudy.upnb.top/",
+        },
+      ],
+    },
+  ],
+};
+export default [manhuaData, videoData, gameData, otherLink];
