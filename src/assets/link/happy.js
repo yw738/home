@@ -166,33 +166,13 @@ const videoData = {
           url: "https://wdoo.net",
         },
         {
-          title: "555 影视",
-          tags: ["电影"],
-          tips: "555 影视，最新 netflix 新剧新电影，全网高清影视免费看，秒拖秒播",
-          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1734444017280.png",
-          url: "https://wuwuplus.shop",
-        },
-        {
           title: "注视影视",
           tags: ["电影"],
           tips: "兴趣使然",
           img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/1995b-www.lgyy.vip.png",
           url: "https://gaze.run",
         },
-        {
-          title: "新视觉影院",
-          tags: ["电影"],
-          tips: "推荐使用夸克4K，存网盘观看超清不卡",
-          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/871ed-www.80yy3.com.png",
-          url: "https://www.80yy3.com",
-        },
-        {
-          title: "NO视频",
-          tags: ["电影"],
-          tips: "不负追剧好时光",
-          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/18c45-www.novipnoad.net.png",
-          url: "https://www.novipnoad.net",
-        },
+
         {
           title: "在线之家",
           tags: ["电影"],
@@ -228,20 +208,7 @@ const videoData = {
           img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/b937c-www.xmxone.cn.png",
           url: "https://www.xmxone.cn",
         },
-        {
-          title: "电影狗",
-          tags: ["电影"],
-          tips: "电影狗，专业的电影搜索引擎网站；用户通过电影名、演员、导演、电视剧、动漫等关键词进行搜索，直达电影资源站，让电影搜索更高效、更便捷、更精准！",
-          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/6a91e-www.dianyinggou.com.png",
-          url: "https://www.dianyinggou.com",
-        },
-        {
-          title: "追影喵",
-          tags: ["电影"],
-          tips: "追影推荐",
-          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/c7b79-zhuiyingmao2.com.png",
-          url: "https://zhuiyingmao5.com",
-        },
+
         {
           title: "影猫仓库",
           tags: ["电影"],
@@ -291,13 +258,7 @@ const videoData = {
           img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1734244492165.png",
           url: "https://www.88tvs.cn",
         },
-        {
-          title: "追影视频",
-          tags: ["电影"],
-          tips: "追影视频",
-          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/07/1721887461024.png",
-          url: "https://app2.zhuiying.cyou",
-        },
+
         {
           title: "绝对影视",
           tags: ["电影"],
@@ -326,13 +287,7 @@ const videoData = {
           img: "https://tuostudy.upnb.top/wp-content/uploads/2024/07/1721886997466.png",
           url: "https://www.mtyy1.com",
         },
-        {
-          title: "呵呵动漫",
-          tags: ["电影"],
-          tips: "免费高质量在线动漫网站！为动漫爱好者提供无与伦比的追番体验!标签：高清日漫,免费日漫,日漫在线观看,在线动漫",
-          img: "https://hehe.cc/app200.png",
-          url: "https://hehe.cc",
-        },
+
         {
           title: "LIBVIO影视",
           tags: ["电影"],
@@ -353,13 +308,6 @@ const videoData = {
           tips: "侠客影视",
           img: "https://tuostudy.upnb.top/wp-content/uploads/2023/04/微信截图_20230403090445.png",
           url: "http://xkys.link",
-        },
-        {
-          title: "No影视",
-          tags: ["电影"],
-          tips: "No影视",
-          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1733160360961.png",
-          url: "https://www.novipnoad.net",
         },
       ],
     },
@@ -470,8 +418,14 @@ const gameData = {
           tags: ["下载"],
           tips: "直达网盘链接,获取rutracker的操作文档",
           url: "https://pan.baidu.com/s/1pRfuzZIaWBex3a8J6z3LCA?pwd=bnx8",
-          private: true,
         },
+        {
+          title: "BYRUTOR",
+          tags: ["下载"],
+          tips: "俄罗斯下载网站，需要FQ",
+          url: "https://byrutgame.org/",
+        },
+
         {
           title: "元神私服",
           tags: ["私服"],

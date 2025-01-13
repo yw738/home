@@ -9,8 +9,10 @@ export let getUrlarr = () => {
       v.children.forEach((s) => {
         aaa.push(...s.data.map((f) => f.url));
       });
-    } else {
+    } else if (v?.data) {
       aaa.push(...v.data.map((a) => a.url));
+    } else {
+      aaa.push(v.url);
     }
   });
   return aaa;
