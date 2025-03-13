@@ -529,6 +529,12 @@ const gameData = {
           img: originImg,
           url: "https://www.origin.com/hkg/zh-tw/store",
         },
+         {
+          title: "藏宝海湾",
+          tags: ["平台"],
+          tips: "逍遥335",
+           url: "https://www.iopq.net",
+        },
       ],
     },
     // 模拟器
