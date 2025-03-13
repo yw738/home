@@ -56,7 +56,7 @@ const manhuaData = {
       tags: ["视频", "H漫画"],
       tips: "琉璃神社是一个分享最新最酷的ACG同人作品资讯社团,在这里你能找到很多欢乐。",
       img: "https://imgsa.baidu.com/forum/pic/item/aec379310a55b319e2125aeb46a98226cefc1740.jpg",
-      url: "https://www.liuli.cz/wp/",
+      url: "www.hacg.icu",
     },
     {
       title: "Mox.moe",
