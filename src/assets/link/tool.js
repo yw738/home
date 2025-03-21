@@ -3,7 +3,6 @@ import githubImg from "./../image/github.png";
 import mdnImg from "./../image/ic-mdn.png";
 import leetcodeImg from "./../image/ic-leetcode.png";
 import JPEGImagerlImg from "./../image/JPEGImager.png";
-import clogImg from "./../image/clog.png";
 import psImg from "./../image/ps.png";
 import menuicon from "./menuicon.js";
 import tbImg from "./../image/tb.png";
@@ -63,6 +62,11 @@ const linkData = {
           tips: "OCR。识别上限，清缓存",
           img: "https://xlimage.uzero.cn/shinescan/res/shinescanicon.png",
           url: "https://web.baimiaoapp.com/",
+        },
+        {
+          title: "Gmail",
+          tips: "谷歌邮箱",
+          url: "https://mail.google.com/mail/u/0/#inbox",
         },
       ],
     },
@@ -159,6 +163,11 @@ const toolLink = {
         },
 
         {
+          title: "Favicon",
+          tips: "在线生成favicon",
+          url: "https://favicon.net.cn/",
+        },
+        {
           title: "convertio",
           tips: "文件转换器-将您的文件转换成任意格式",
           url: "https://convertio.co/zh/",
@@ -168,6 +177,11 @@ const toolLink = {
           tips: "下载各种ide key的地方",
           url: "https://ipfs.io/ipfs/bafybeiatyghkzrrtodzt3stm652rkrjxndg4hq2ublfdmifk7plg5k5brq/",
         },
+        {
+          title: "我的浏览器",
+          tips: "查看浏览器信息",
+          url: "https://mybrowse.osfipin.com/",
+        },
       ],
     },
     // AI
@@ -175,16 +189,22 @@ const toolLink = {
       name: "AI",
       data: [
         {
-          title: "ChatGPT",
-          tips: "OpenAI旗下对话工具",
-          img: "https://static.json.cn/r/img/aigc/chatgpt-icon.png",
-          url: "https://cn.bing.com/search?q=ChatGPT&ensearch=1",
+          title: "deepseek",
+          tips: "国产Ai",
+          img: "https://img1.ali213.net/shouyou/cover/4/10659947.jpg",
+          url: "https://chat.deepseek.com/",
         },
         {
           title: "通义千问",
           tips: "阿里巴巴推出的类ChatGPT响应人类指令的大模型，已免费开放",
           img: "https://static.json.cn/r/img/aigc/tongyi-aliyun-icon.png",
           url: "https://qianwen.aliyun.com/",
+        },
+        {
+          title: "ChatGPT",
+          tips: "OpenAI旗下对话工具",
+          img: "https://static.json.cn/r/img/aigc/chatgpt-icon.png",
+          url: "https://cn.bing.com/search?q=ChatGPT&ensearch=1",
         },
       ],
     },
@@ -446,6 +466,19 @@ const webLink = {
           img: "https://pic3.zhimg.com/v2-19fd33c5a591cc2eedfaa089075e73c8_1440w.jpg",
           url: "https://es6.ruanyifeng.com/",
         },
+        {
+          title: "TypeScript-阮一峰",
+          tags: ["TS"],
+          tips: "学习ts",
+          url: "https://www.bookstack.cn/read/wangdoc-typescript-tutorial/README.md",
+        },
+        {
+          title: "TS 在线调试",
+          tags: ["TS"],
+          tips: "学习ts",
+          url: "https://www.typescriptlang.org/play/?#code",
+        },
+
         {
           title: "MDN",
           tips: "MDN Web Docs 是一个提供 Web 技术和促进 Web 技术软件的不断发展的学习平台",
