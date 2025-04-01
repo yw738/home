@@ -503,6 +503,12 @@ const gameData = {
           tips: "60版本数据库",
           url: "https://60.dvg.cn/?npc=12129",
         },
+        {
+          title: "藏宝海湾",
+          tags: ["平台"],
+          tips: "逍遥335",
+          url: "https://www.iopq.net",
+        },
       ],
     },
     {
@@ -528,12 +534,6 @@ const gameData = {
           tips: "origin 游戏社交平台",
           img: originImg,
           url: "https://www.origin.com/hkg/zh-tw/store",
-        },
-         {
-          title: "藏宝海湾",
-          tags: ["平台"],
-          tips: "逍遥335",
-           url: "https://www.iopq.net",
         },
       ],
     },
