@@ -1,13 +1,10 @@
 import menuicon from "./menuicon.js";
-import biliImg from "./../image/bilibili.png";
-import yinhuaImg from "./../image/yinhua.png";
 import txImg from "./../image/txmh.png";
 import biliMhImg from "./../image/bilibilimange.png";
 import youxiaImg from "./../image/youxia.png";
 import epicImg from "./../image/epic.png";
 import originImg from "./../image/origin.png";
 import ZLibraryImg from "./../image/ZLibrary.png";
-import ebookImg from "./../image/ebook.png";
 import ngaImg from "./../image/nga.png";
 import logoMangabzImg from "./../image/logo_mangabz.jpg";
 import clogImg from "./../image/clog.png";
@@ -25,7 +22,7 @@ const manhuaData = {
       title: "哔哩哔哩",
       tags: ["视频"],
       tips: "- ( ゜- ゜)つロ 乾杯~ - ",
-      img: biliImg,
+      img: "https://bizaladdin-image.baidu.com/0/pic/288929568_-302461403_433714833.jpg",
       url: "https://www.bilibili.com/",
     },
     {
@@ -128,7 +125,6 @@ const videoData = {
           title: "樱花动漫",
           tags: ["视频"],
           tips: "有上万集高清晰画质的在线动漫",
-          img: yinhuaImg,
           url: "http://www.imomoe.live/",
         },
         {
@@ -180,13 +176,7 @@ const videoData = {
           img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/d054b-www.zxzjhd.com.png",
           url: "https://www.zxzjhd.com",
         },
-        {
-          title: "电影兔",
-          tags: ["电影"],
-          tips: "电影兔 - 最新电影电视剧在线观看",
-          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/03/b4d3d-www.dytdy.com.png",
-          url: "https://dianyingtu.com",
-        },
+
         {
           title: "热播之家",
           tags: ["电影"],
@@ -273,13 +263,7 @@ const videoData = {
           img: "https://tuostudy.upnb.top/wp-content/uploads/2024/12/1734244439062.png",
           url: "https://www.knvod.com",
         },
-        {
-          title: "美益达影视",
-          tags: ["电影"],
-          tips: "美益达影视提供最新最快的电影电视剧免费在线观看",
-          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/08/1722658343711.png",
-          url: "https://www.myd04.com",
-        },
+
         {
           title: "麦田影院",
           tags: ["电影"],
@@ -295,13 +279,7 @@ const videoData = {
           img: "https://tuostudy.upnb.top/wp-content/uploads/2024/07/1721885787047.png",
           url: "https://iioo.me",
         },
-        {
-          title: "在线之家",
-          tags: ["电影"],
-          tips: "在线之家网址发布页,在线之家最新地址,在线之家网址多少",
-          img: "https://tuostudy.upnb.top/wp-content/uploads/2024/07/1721885552810.png",
-          url: "https://www.zxzj.site",
-        },
+
         {
           title: "侠客影视",
           tags: ["电影"],
@@ -355,14 +333,6 @@ const videoData = {
           img: zsklogoImg,
           url: "https://book.zhishikoo.com/",
         },
-
-        // {
-        //   title: "Lorefree",
-        //   tags: ["下载"],
-        //   tips: "国内比较慢的图书网站~",
-        //   img: ebookImg,
-        //   url: "https://ebook2.lorefree.com/",
-        // },
       ],
     },
   ],

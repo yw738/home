@@ -1,7 +1,7 @@
-// import DataArr from "@/assets/public.js";
+import linkdata from "./link.js";
 
 let list = [];
-
+list = linkdata;
 export let getUrlarr = () => {
   let aaa = [];
   list.forEach((v) => {

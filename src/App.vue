@@ -17,6 +17,7 @@ onBeforeMount(() => {
     name: (i + 1).toString(),
     icon: v.icon || null,
   }));
+  console.log(DataArr)
 });
 
 let CloseWebPage = () => {
@@ -37,6 +38,7 @@ let CloseWebPage = () => {
     window.close();
   }
 };
+
 </script>
 <style lang="less">
 @import "@/assets/css/common.css";
