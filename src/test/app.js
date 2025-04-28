@@ -3,7 +3,7 @@ import { JSONFilePreset } from "lowdb/node";
 import { getUrlarr } from "./test.js";
 const defaultData = { posts: [] };
 const db = await JSONFilePreset("db.json", defaultData);
-let arr = getUrlarr();
+let arr = await getUrlarr();
 
 /**
  * 测试链接专用
