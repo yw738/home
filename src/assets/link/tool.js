@@ -68,6 +68,11 @@ const linkData = {
           tips: "谷歌邮箱",
           url: "https://mail.google.com/mail/u/0/#inbox",
         },
+        {
+          title: "Google Analytics",
+          tips: "谷歌分析",
+          url: "https://analytics.google.com/analytics/web/",
+        },
       ],
     },
     {
@@ -138,7 +143,8 @@ const toolLink = {
           tips: "MD5加密是一种知名的不可逆的加密算法，在密码存储领域里被广泛使用",
           url: "https://tool.liumingye.cn/md5/",
         },
-        {//11
+        {
+          //11
           title: "站长工具",
           tips: "站长工具是站长的必备工具。经常上站长工具可以了解SEO数据变化。",
           img: zzgjImg,
@@ -182,11 +188,22 @@ const toolLink = {
           tips: "查看浏览器信息",
           url: "https://mybrowse.osfipin.com/",
         },
+        {
+          title: "json Diff",
+          tips: "json 在线比对",
+          img: "https://www.jq22.com/img/logo.png",
+          url: "https://www.jq22.com/textDifference",
+        },
+        {
+          title: "Photoshop",
+          tips: "Photoshop 2019-2022 茶末余香增强直装版",
+          url: "https://flowus.cn/share/600cf0c6-2a37-4884-90fd-5a9e668a4939",
+        },
       ],
     },
-    // AI
+    // Ai
     {
-      name: "AI",
+      name: "Ai",
       data: [
         {
           title: "deepseek",
@@ -205,6 +222,42 @@ const toolLink = {
           tips: "OpenAI旗下对话工具",
           img: "https://static.json.cn/r/img/aigc/chatgpt-icon.png",
           url: "https://cn.bing.com/search?q=ChatGPT&ensearch=1",
+        },
+      ],
+    },
+    // 3d 预览
+    {
+      name: "PCB",
+      data: [
+        {
+          title: "tracespace",
+          tips: "Gerber预览，生成svg",
+          img: "https://avatars.githubusercontent.com/u/2034315?s=48&v=4",
+          url: "https://tracespace.io/view/",
+        },
+        {
+          title: "3dviewer",
+          tips: "模型预览,支持WRL、step、glb等",
+          img: "https://avatars.githubusercontent.com/u/2034315?s=48&v=4",
+          url: "https://3dviewer.net/",
+        },
+        {
+          title: "Kicad",
+          tips: "Kicad 官网",
+          img: "https://www.kicad.org/img/kicad_logo_small.png",
+          url: "https://www.kicad.org/",
+        },
+        {
+          title: "Kicad 开源模型",
+          tips: "提供模型链接，需要FQ",
+          img: "https://www.kicad.org/img/kicad_logo_small.png",
+          url: "https://www.kicad.org/made-with-kicad/",
+        },
+        {
+          title: "Kicad 中文论坛",
+          tips: "i love kicad",
+          img: "https://www.kicad.org/img/kicad_logo_small.png",
+          url: "https://ilovekicad.com/",
         },
       ],
     },
@@ -536,6 +589,23 @@ const webLink = {
           tips: "前端面试基础知识、面试准备、面试题~",
           img: "https://gw.alipayobjects.com/zos/bmw-prod/501b3e5b-8924-45cd-95ee-4c7470570204.svg",
           url: "https://gxaedu.yuque.com/books/share/010981b8-858b-4b0a-96e9-e0bd7da1b0ed/ul5f8d",
+        },
+      ],
+    },
+
+    // 其他工具
+    {
+      name: "其他",
+      data: [
+        {
+          title: "datav-vue3",
+          tips: "BI大屏的开源库",
+          url: "https://datav-vue3.netlify.app/",
+        },
+        {
+          title: "flowlong",
+          tips: "设计流程图的开源库",
+          url: "https://flowlong-desginer.pages.dev/",
         },
       ],
     },
