@@ -1,15 +1,4 @@
-import tsImg from "./../image/ic-ts.png";
-import githubImg from "./../image/github.png";
-import mdnImg from "./../image/ic-mdn.png";
-import leetcodeImg from "./../image/ic-leetcode.png";
-import JPEGImagerlImg from "./../image/JPEGImager.png";
-import psImg from "./../image/ps.png";
 import menuicon from "./menuicon.js";
-import tbImg from "./../image/tb.png";
-import ylsImg from "./../image/yls.png";
-import qiyeImg from "./../image/qiye.png";
-import zzgjImg from "./../image/zzgj.png";
-import iocnfontImg from "./../image/iocnfont.png";
 
 /* 常用推荐 */
 const linkData = {
@@ -21,7 +10,7 @@ const linkData = {
         {
           title: "Github",
           tips: "世界上最大的代码托管平台",
-          img: githubImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/github.png",
           url: "https://github.com/",
         },
         {
@@ -40,7 +29,7 @@ const linkData = {
         {
           title: "贴吧",
           tips: "百度贴吧，以兴趣主题聚合志同道合者的互动平台",
-          img: tbImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/tb.png",
           url: "https://tieba.baidu.com/",
         },
         {
@@ -53,7 +42,7 @@ const linkData = {
         {
           title: "羊羊&&缪崽",
           tips: "七夕纪念网站，记录羊羊和缪崽在一起的时间~",
-          img: ylsImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/yls.png",
           url: "https://ylsandmls.vercel.app/",
           private: true,
         },
@@ -98,7 +87,7 @@ const linkData = {
         {
           title: "国家企业信息公示平台",
           tips: "企业信用信息 经营异常名录 严重违法失信名单",
-          img: qiyeImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/qiye.png",
           url: "https://www.gsxt.gov.cn/corp-query-homepage.html",
         },
 
@@ -124,13 +113,13 @@ const toolLink = {
         {
           title: "iconfont",
           tips: "丰富的矢量图标库",
-          img: iocnfontImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/iocnfont.png",
           url: "https://www.iconfont.cn/",
         },
         {
           title: "JSON在线校验格式化工具",
           tips: "JSON在线解析(双击自动格式化) ",
-          img: JPEGImagerlImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/JPEGImager.png",
           url: "https://www.bejson.com/explore/index_new/",
         },
         {
@@ -147,19 +136,19 @@ const toolLink = {
           //11
           title: "站长工具",
           tips: "站长工具是站长的必备工具。经常上站长工具可以了解SEO数据变化。",
-          img: zzgjImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/zzgj.png",
           url: "https://tool.chinaz.com/",
         },
         {
           title: "图片压缩工具",
           tips: "图片压缩工具",
-          img: JPEGImagerlImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/JPEGImager.png",
           url: "https://www.bejson.com/ui/compress_img/",
         },
         {
           title: "线上PS",
           tips: "Photopea | Online Photo Editor",
-          img: psImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/ps.png",
           url: "https://www.photopea.com/",
         },
         {
@@ -389,7 +378,7 @@ const webLink = {
           title: "TypeScript",
           tags: ["JS工具库"],
           tips: "JavaScript的超集。",
-          img: tsImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/ic-ts.png",
           url: "https://www.tslang.cn/index.html",
         },
         {
@@ -535,7 +524,7 @@ const webLink = {
         {
           title: "MDN",
           tips: "MDN Web Docs 是一个提供 Web 技术和促进 Web 技术软件的不断发展的学习平台",
-          img: mdnImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/ic-mdn.png",
           url: "https://developer.mozilla.org/zh-CN/docs/Web",
         },
         {
@@ -547,7 +536,7 @@ const webLink = {
         {
           title: "LeetCode",
           tips: "海量技术面试资源",
-          img: leetcodeImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/ic-leetcode.png",
           url: "https://leetcode-cn.com/",
         },
       ],

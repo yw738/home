@@ -1,18 +1,4 @@
 import menuicon from "./menuicon.js";
-import txImg from "./../image/txmh.png";
-import biliMhImg from "./../image/bilibilimange.png";
-import youxiaImg from "./../image/youxia.png";
-import epicImg from "./../image/epic.png";
-import originImg from "./../image/origin.png";
-import ZLibraryImg from "./../image/ZLibrary.png";
-import ngaImg from "./../image/nga.png";
-import logoMangabzImg from "./../image/logo_mangabz.jpg";
-import clogImg from "./../image/clog.png";
-import oldmanImg from "./../image/oldman.png";
-import switchImg from "./../image/switchLogo.png";
-import zsklogoImg from "./../image/zsklogo.png";
-import xinyueImg from "./../image/xinyue.png";
-
 /* ACG社区 */
 const manhuaData = {
   name: "ACG社区",
@@ -37,14 +23,14 @@ const manhuaData = {
       title: "腾讯漫画",
       tags: ["漫画"],
       tips: "最大正版动漫网站,连载众多原创国漫。",
-      img: txImg,
+      img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/txmh.png",
       url: "https://ac.qq.com/",
     },
     {
       title: "哔哩哔哩漫画",
       tags: ["漫画"],
       tips: "bilibili运营的正版漫画软件。",
-      img: biliMhImg,
+      img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/bilibilimange.png",
       url: "https://manga.bilibili.com/",
     },
 
@@ -65,7 +51,7 @@ const manhuaData = {
       title: "mangabz",
       tags: ["漫画"],
       tips: "看漫画,需要梯子",
-      img: logoMangabzImg,
+      img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/logo_mangabz.jpg",
       url: "http://www.mangabz.com/",
     },
     {
@@ -323,14 +309,14 @@ const videoData = {
           title: "Z-Library",
           tags: ["下载"],
           tips: "全球最大的数字图书馆",
-          img: ZLibraryImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/ZLibrary.png",
           url: "https://z-library.sk/",
         },
         {
           title: "知识库",
           tags: ["下载"],
           tips: "收集了海量书籍资源的网站",
-          img: zsklogoImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/zsklogo.png",
           url: "https://book.zhishikoo.com/",
         },
       ],
@@ -350,11 +336,11 @@ const gameData = {
           title: "switch520",
           tags: ["switch", "下载"],
           tips: "下载pc、switch等学习版游戏~",
-          img: switchImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/switchLogo.png",
           url: "https://www.gamer520.com/",
         },
         {
-          img: youxiaImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/youxia.png",
           title: "游侠网",
           tips: "中国的单机游戏门户",
           tags: ["免费"],
@@ -374,7 +360,7 @@ const gameData = {
           title: "NGA",
           tags: ["论坛"],
           tips: "NGA是国内专业的游戏玩家社区",
-          img: ngaImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/nga.png",
           url: "https://bbs.nga.cn/",
         },
         {
@@ -417,13 +403,13 @@ const gameData = {
           title: "心悦俱乐部",
           tips: "用钱创造快乐~",
           tags: ["DNF"],
-          img: xinyueImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/xinyue.png",
           url: "https://xinyue.qq.com/act/a20210317dnf/index_pc.html",
         },
         {
           title: "Colg",
           tips: "中国的网游类综合站点",
-          img: clogImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/clog.png",
           url: "https://bbs.colg.cn/forum.php",
         },
         {
@@ -495,14 +481,14 @@ const gameData = {
           title: "Epic",
           tags: ["平台"],
           tips: "提供丰富优质的正版PC游戏",
-          img: epicImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/epic.png",
           url: "https://www.epicgames.com/store/zh-CN/",
         },
         {
           title: "Origin",
           tags: ["平台"],
           tips: "origin 游戏社交平台",
-          img: originImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/origin.png",
           url: "https://www.origin.com/hkg/zh-tw/store",
         },
       ],
@@ -524,14 +510,14 @@ const gameData = {
           title: "老男人游戏网",
           tags: ["下载"],
           tips: "老游戏下载库，包含GBA、PSP、NDS等游戏资源。",
-          img: oldmanImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/oldman.png",
           url: "https://www.oldmanemu.net/",
         },
         {
           title: "老男人游戏网配套论坛",
           tags: ["论坛"],
           tips: "这是资源站 | 老男人游戏网 的配套论坛",
-          img: oldmanImg,
+          img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/oldman.png",
           url: "https://bbs.oldmanemu.net/",
         },
       ],
