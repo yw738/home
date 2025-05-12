@@ -62,6 +62,11 @@ const linkData = {
           tips: "谷歌分析",
           url: "https://analytics.google.com/analytics/web/",
         },
+        {
+          title: "在线流程图制作",
+          tips: "需要翻墙",
+          url: "https://app.diagrams.net/",
+        },
       ],
     },
     {
