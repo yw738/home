@@ -1,4 +1,4 @@
-import menuicon from "./menuicon.js";
+import menuicon from "./../image/menuicon.js";
 /* ACG社区 */
 const manhuaData = {
   name: "ACG社区",

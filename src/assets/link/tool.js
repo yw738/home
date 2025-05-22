@@ -1,5 +1,4 @@
-import menuicon from "./menuicon.js";
-
+import menuicon from "./../image/menuicon.js";
 /* 常用推荐 */
 const linkData = {
   name: "常用推荐",
