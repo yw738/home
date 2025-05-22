@@ -17,6 +17,9 @@
   </a-menu>
 </template>
 <script setup>
+/**
+ * 头部菜单
+*/
 import { defineComponent, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 const router = useRouter();
@@ -30,7 +33,7 @@ let navList = [
   {
     label: "工具",
     children: [
-      { label: "工具", key: 2, url: "https://yw738.github.io/zxsj_tool/" },
+      { label: "诛仙世界利润助手", key: 2, url: "https://yw738.github.io/zxsj_tool/" },
     ],
   },
 ];
