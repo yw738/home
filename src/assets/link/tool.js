@@ -66,6 +66,12 @@ const linkData = {
           tips: "需要翻墙",
           url: "https://app.diagrams.net/",
         },
+        {
+          title: "Cpolar",
+          tips: "内网穿透工具，秒杀向日葵",
+          img:'https://www.cpolar.com/wp-content/uploads/2018/11/normal-logo-2.png',
+          url: "https://www.cpolar.com/",
+        },
       ],
     },
     {
