@@ -1,8 +1,6 @@
-import menuicon from "./../image/menuicon.js";
 /* 优秀的开源项目 */
 const githubLs = {
   name: "开源项目",
-  icon: menuicon.gameIcon,
   children: [
     {
       name: "热门",
