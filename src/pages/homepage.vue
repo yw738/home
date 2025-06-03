@@ -6,7 +6,8 @@
 //leftmenu #f9f9f9
 import Layout from "@/components/Layout.vue";
 import DataArr from "@/assets/public.js";
-import { defineComponent, onBeforeMount, ref } from "vue";
+import { onBeforeMount, ref } from "vue";
+import menuicon from "@/assets/image/menuicon.js";
 
 let menuList = ref([]);
 
@@ -15,7 +16,7 @@ onBeforeMount(() => {
   menuList.value = DataArr.map((v, i) => ({
     label: v.title,
     name: (i + 1).toString(),
-    icon: v.icon || null,
+    icon: menuicon[v.icon] || null,
   }));
 });
 

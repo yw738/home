@@ -1,8 +1,7 @@
-import menuicon from "./../image/menuicon.js";
 /* ACG社区 */
 const manhuaData = {
   title: "ACG社区",
-  icon: menuicon.manhuaIcon,
+  icon: "manhuaIcon",
   children: [
     {
       title: "哔哩哔哩",
@@ -65,12 +64,11 @@ const manhuaData = {
 /* 我爱看视频 */
 const videoData = {
   title: "生活",
-  icon: menuicon.videoIcon,
+  icon: "videoIcon",
   children: [
     /* 音乐相关 */
     {
       title: "听音乐",
-      icon: menuicon.musicIcon,
       children: [
         {
           img: "https://bizaladdin-image.baidu.com/0/pic/1455484060_685827087_-310145699.jpg",
@@ -278,7 +276,6 @@ const videoData = {
     // 图片
     {
       title: "图片",
-      icon: menuicon.musicIcon,
       children: [
         {
           title: "3g壁纸",
@@ -296,7 +293,6 @@ const videoData = {
     // 书籍相关
     {
       title: "书籍相关",
-      icon: menuicon.bookIcon,
       children: [
         {
           title: "鸠摩搜索",
@@ -327,7 +323,7 @@ const videoData = {
 /* 游戏相关 */
 const gameData = {
   title: "游戏相关",
-  icon: menuicon.gameIcon,
+  icon: "gameIcon",
   children: [
     {
       title: "热门",
@@ -496,7 +492,6 @@ const gameData = {
     // 模拟器
     {
       title: "模拟器",
-      icon: menuicon.gameIcon,
       children: [
         {
           title: "GBA线上模拟器",
@@ -525,7 +520,7 @@ const gameData = {
   ],
 };
 const otherLink = {
-  icon: menuicon.interviewIcon,
+  icon: "interviewIcon",
   title: "其他推荐",
   children: [
     {

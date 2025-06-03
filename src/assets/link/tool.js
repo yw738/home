@@ -1,4 +1,3 @@
-import menuicon from "./../image/menuicon.js";
 /* 常用推荐 */
 const linkData = {
   title: "常用推荐",
@@ -69,7 +68,7 @@ const linkData = {
         {
           title: "Cpolar",
           tips: "内网穿透工具，秒杀向日葵",
-          img:'https://www.cpolar.com/wp-content/uploads/2018/11/normal-logo-2.png',
+          img: "https://www.cpolar.com/wp-content/uploads/2018/11/normal-logo-2.png",
           url: "https://www.cpolar.com/",
         },
       ],
@@ -114,11 +113,11 @@ const linkData = {
 /* 常用工具 */
 const toolLink = {
   title: "常用工具",
+  icon: "toolIcon",
   children: [
     // 常用工具
     {
       title: "常用工具",
-      icon: menuicon.toolIcon,
       children: [
         {
           title: "iconfont",
@@ -266,7 +265,7 @@ const toolLink = {
 /* 磁力搜索 */
 const btLink = {
   title: "BT磁力搜索",
-  icon: menuicon.btIcon,
+  icon: "btIcon",
   children: [
     {
       img: "https://www.no404.vip/wp-content/uploads/2020/02/bt1207.png",
@@ -293,11 +292,11 @@ const btLink = {
 /* 开发工具 */
 const webLink = {
   title: "开发工具",
+  icon: "jsIcon",
   children: [
     // 常用库及框架
     {
       title: "库及框架",
-      icon: menuicon.jsIcon,
       children: [
         {
           title: "React",
@@ -402,7 +401,6 @@ const webLink = {
     // CSS工具
     {
       title: "CSS工具",
-      icon: menuicon.cssIcon,
       children: [
         {
           title: "Animista",
@@ -441,7 +439,6 @@ const webLink = {
     // 前端UI库
     {
       title: "前端UI库",
-      icon: menuicon.uiIcon,
       children: [
         {
           title: "Element-UI",
@@ -490,7 +487,6 @@ const webLink = {
     // 打包工具
     {
       title: "打包工具",
-      icon: menuicon.buildIcon,
       children: [
         {
           title: "Webpack",
@@ -509,7 +505,6 @@ const webLink = {
     // 学习
     {
       title: "学习",
-      icon: menuicon.studyIcon,
       children: [
         {
           title: "ES6 入门教程",
@@ -581,7 +576,6 @@ const webLink = {
     // 面试相关
     {
       title: "面试相关",
-      icon: menuicon.interviewIcon,
       children: [
         {
           title: "前端面试宝典",
