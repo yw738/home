@@ -8,7 +8,6 @@ let arr = await getUrlarr();
 /**
  * 测试链接专用
  */
-
 async function checkLinkValidity(url) {
   try {
     // 发送HEAD请求以避免下载整个页面内容

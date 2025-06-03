@@ -29,7 +29,7 @@ import { message } from "ant-design-vue";
 const checked = ref(false);
 const visible = ref(false);
 const value = ref("");
-const pass = window.atob("dGltaXlhbmc="); //window.btoa("19980104")
+const pass = window.atob("dGltaXlhbmc=");
 import { useUser } from "@/store/user.js";
 const user = useUser();
 

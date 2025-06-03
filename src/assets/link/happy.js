@@ -341,16 +341,14 @@ const gameData = {
           tips: "中国的单机游戏门户",
           tags: ["免费"],
           url: "https://www.ali213.net/",
-          private: true,
-        },
+         },
         {
           img: "https://imgsa.baidu.com/forum/pic/item/b90e7bec54e736d18efb66569a504fc2d4626980.jpg",
           title: "3DM",
           tips: "三大妈游戏网",
           tags: ["免费"],
           url: "https://www.3dmgame.com/",
-          private: true,
-        },
+         },
 
         {
           title: "NGA",
