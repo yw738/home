@@ -1,8 +1,32 @@
 import axios from "axios";
 import { JSONFilePreset } from "lowdb/node";
-import { getUrlarr } from "./test.js";
+import list from "./../assets/public.js";
 const defaultData = { posts: [] };
 const db = await JSONFilePreset("db.json", defaultData);
+
+/**
+ * 获取所有需要测试的链接
+ */
+let getUrlarr = async () => {
+  let aaa = [];
+  try {
+    list?.forEach((v) => {
+      if (v.children && v.children[0]?.children) {
+        v?.children?.forEach((s) => {
+          aaa.push(...s.children.map((f) => f.url));
+        });
+      } else if (v?.children) {
+        aaa.push(...v.children.map((a) => a.url));
+      } else {
+        aaa.push(v.url);
+      }
+    });
+  } catch (err) {
+    console.log(err);
+  }
+  return aaa;
+};
+
 let arr = await getUrlarr();
 
 /**
@@ -37,6 +61,13 @@ let testUrl = async () => {
     await checkLinkValidity(arr[i]);
     await db.write();
   }
+  console.log(`================================================`);
+  console.log(`================== 测试完成 =====================`);
+  console.log(`================================================`);
 };
 
 testUrl();
+
+console.log(`================================================`);
+console.log(`================ 开始启动测试 ===================`);
+console.log(`================================================`);
