@@ -10,6 +10,11 @@ const routes = [
     component: () => import("@/pages/homepage.vue"),
     children: [],
   },
+  {
+    path: "/setJson",
+    component: () => import("@/pages/setJson.vue"),
+    children: [],
+  },
   // {
   //   path: "/priceiframe",
   //   component: () => import("@/pages/Desktop/iframe/price.vue"),

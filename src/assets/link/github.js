@@ -1,10 +1,10 @@
 /* 优秀的开源项目 */
 const githubLs = {
-  name: "开源项目",
+  title: "开源项目",
   children: [
     {
-      name: "热门",
-      data: [
+      title: "热门",
+      children: [
         {
           title: "Filebrowser",
           tags: ["服务器"],

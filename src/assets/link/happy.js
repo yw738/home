@@ -1,9 +1,9 @@
 import menuicon from "./../image/menuicon.js";
 /* ACG社区 */
 const manhuaData = {
-  name: "ACG社区",
+  title: "ACG社区",
   icon: menuicon.manhuaIcon,
-  data: [
+  children: [
     {
       title: "哔哩哔哩",
       tags: ["视频"],
@@ -64,14 +64,14 @@ const manhuaData = {
 
 /* 我爱看视频 */
 const videoData = {
-  name: "生活",
+  title: "生活",
   icon: menuicon.videoIcon,
   children: [
     /* 音乐相关 */
     {
-      name: "听音乐",
+      title: "听音乐",
       icon: menuicon.musicIcon,
-      data: [
+      children: [
         {
           img: "https://bizaladdin-image.baidu.com/0/pic/1455484060_685827087_-310145699.jpg",
           title: "网易云",
@@ -105,8 +105,8 @@ const videoData = {
     },
     // 影视
     {
-      name: "影视",
-      data: [
+      title: "影视",
+      children: [
         {
           title: "樱花动漫",
           tags: ["视频"],
@@ -277,9 +277,9 @@ const videoData = {
     },
     // 图片
     {
-      name: "图片",
+      title: "图片",
       icon: menuicon.musicIcon,
-      data: [
+      children: [
         {
           title: "3g壁纸",
           tags: ["壁纸"],
@@ -295,9 +295,9 @@ const videoData = {
     },
     // 书籍相关
     {
-      name: "书籍相关",
+      title: "书籍相关",
       icon: menuicon.bookIcon,
-      data: [
+      children: [
         {
           title: "鸠摩搜索",
           tags: ["下载"],
@@ -326,12 +326,12 @@ const videoData = {
 
 /* 游戏相关 */
 const gameData = {
-  name: "游戏相关",
+  title: "游戏相关",
   icon: menuicon.gameIcon,
   children: [
     {
-      name: "热门",
-      data: [
+      title: "热门",
+      children: [
         {
           title: "switch520",
           tags: ["switch", "下载"],
@@ -397,8 +397,8 @@ const gameData = {
       ],
     },
     {
-      name: "DNF",
-      data: [
+      title: "DNF",
+      children: [
         {
           title: "心悦俱乐部",
           tips: "用钱创造快乐~",
@@ -433,8 +433,8 @@ const gameData = {
       ],
     },
     {
-      name: "WOW",
-      data: [
+      title: "WOW",
+      children: [
         {
           title: "猎人宠物工具",
           tips: "wow宠物大全",
@@ -468,8 +468,8 @@ const gameData = {
       ],
     },
     {
-      name: "平台",
-      data: [
+      title: "平台",
+      children: [
         {
           img: "https://bizaladdin-image.baidu.com/0/pic/-389184942_-2058906930_854960486.jpg",
           title: "Steam",
@@ -495,9 +495,9 @@ const gameData = {
     },
     // 模拟器
     {
-      name: "模拟器",
+      title: "模拟器",
       icon: menuicon.gameIcon,
-      data: [
+      children: [
         {
           title: "GBA线上模拟器",
           tags: ["GBA"],
@@ -526,11 +526,11 @@ const gameData = {
 };
 const otherLink = {
   icon: menuicon.interviewIcon,
-  name: "其他推荐",
+  title: "其他推荐",
   children: [
     {
-      name: "外链网站",
-      data: [
+      title: "外链网站",
+      children: [
         {
           title: "Tuostudy",
           tips: "其他导航站点",

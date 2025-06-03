@@ -1,13 +1,13 @@
 <template>
   <div class="choose_box" :id="`scroll${index}`">
-    <template v-if="params.children">
+    <template v-if="params.children && params.children[0].children">
       <div style="margin-bottom: 24px">
         <Tabcom :tabHead="params.children" v-model:active="active" />
       </div>
       <template v-for="(v, i) in params.children" :key="i">
         <div v-show="active == i">
           <a-row :gutter="[30, 24]">
-            <template v-for="(item, index) in v.data" :key="index">
+            <template v-for="(item, index) in v.children" :key="index">
               <!-- item.private => 是否隐藏该卡片，设为私密卡片 -->
               <a-col
                 :xxl="4"
@@ -17,7 +17,11 @@
                 :sm="24"
                 v-if="isPrivate || !item.private"
               >
-                <Card style="width: 100%" :tagName="params.name" :item="item" />
+                <Card
+                  style="width: 100%"
+                  :tagName="params.title"
+                  :item="item"
+                />
               </a-col>
             </template>
           </a-row>
@@ -30,10 +34,10 @@
         <div>
           <TagOutlined />
         </div>
-        <div>{{ params.name }}</div>
+        <div>{{ params.title }}</div>
       </div>
       <a-row :gutter="[30, 24]">
-        <template v-for="(item, index) in params.data" :key="index">
+        <template v-for="(item, index) in params.children" :key="index">
           <!-- item.private => 是否隐藏该卡片，设为私密卡片 -->
           <a-col
             :xxl="4"
@@ -43,7 +47,7 @@
             :sm="24"
             v-if="isPrivate || !item.private"
           >
-            <Card style="width: 100%" :tagName="params.name" :item="item" />
+            <Card style="width: 100%" :tagName="params.title" :item="item" />
           </a-col>
         </template>
       </a-row>

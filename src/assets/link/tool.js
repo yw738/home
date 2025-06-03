@@ -1,11 +1,11 @@
 import menuicon from "./../image/menuicon.js";
 /* 常用推荐 */
 const linkData = {
-  name: "常用推荐",
+  title: "常用推荐",
   children: [
     {
-      name: "常用推荐",
-      data: [
+      title: "常用推荐",
+      children: [
         {
           title: "Github",
           tips: "世界上最大的代码托管平台",
@@ -75,8 +75,8 @@ const linkData = {
       ],
     },
     {
-      name: "测速",
-      data: [
+      title: "测速",
+      children: [
         {
           title: "东北大学测速",
           tags: ["测速"],
@@ -92,8 +92,8 @@ const linkData = {
       ],
     },
     {
-      name: "工具",
-      data: [
+      title: "工具",
+      children: [
         {
           title: "国家企业信息公示平台",
           tips: "企业信用信息 经营异常名录 严重违法失信名单",
@@ -113,13 +113,13 @@ const linkData = {
 
 /* 常用工具 */
 const toolLink = {
-  name: "常用工具",
+  title: "常用工具",
   children: [
     // 常用工具
     {
-      name: "常用工具",
+      title: "常用工具",
       icon: menuicon.toolIcon,
-      data: [
+      children: [
         {
           title: "iconfont",
           tips: "丰富的矢量图标库",
@@ -202,8 +202,8 @@ const toolLink = {
     },
     // Ai
     {
-      name: "Ai",
-      data: [
+      title: "Ai",
+      children: [
         {
           title: "deepseek",
           tips: "国产Ai",
@@ -226,8 +226,8 @@ const toolLink = {
     },
     // 3d 预览
     {
-      name: "PCB",
-      data: [
+      title: "PCB",
+      children: [
         {
           title: "tracespace",
           tips: "Gerber预览，生成svg",
@@ -265,9 +265,9 @@ const toolLink = {
 
 /* 磁力搜索 */
 const btLink = {
-  name: "BT磁力搜索",
+  title: "BT磁力搜索",
   icon: menuicon.btIcon,
-  data: [
+  children: [
     {
       img: "https://www.no404.vip/wp-content/uploads/2020/02/bt1207.png",
       title: "BT1207",
@@ -292,13 +292,13 @@ const btLink = {
 
 /* 开发工具 */
 const webLink = {
-  name: "开发工具",
+  title: "开发工具",
   children: [
     // 常用库及框架
     {
-      name: "库及框架",
+      title: "库及框架",
       icon: menuicon.jsIcon,
-      data: [
+      children: [
         {
           title: "React",
           tags: ["框架"],
@@ -401,9 +401,9 @@ const webLink = {
     },
     // CSS工具
     {
-      name: "CSS工具",
+      title: "CSS工具",
       icon: menuicon.cssIcon,
-      data: [
+      children: [
         {
           title: "Animista",
           tips: "在线有大量CSS动画网络应用程序。",
@@ -440,9 +440,9 @@ const webLink = {
     },
     // 前端UI库
     {
-      name: "前端UI库",
+      title: "前端UI库",
       icon: menuicon.uiIcon,
-      data: [
+      children: [
         {
           title: "Element-UI",
           tags: ["UI"],
@@ -489,9 +489,9 @@ const webLink = {
     },
     // 打包工具
     {
-      name: "打包工具",
+      title: "打包工具",
       icon: menuicon.buildIcon,
-      data: [
+      children: [
         {
           title: "Webpack",
           tips: "webpack 是一个现代 JavaScript 应用程序的静态模块打包器。",
@@ -508,9 +508,9 @@ const webLink = {
     },
     // 学习
     {
-      name: "学习",
+      title: "学习",
       icon: menuicon.studyIcon,
-      data: [
+      children: [
         {
           title: "ES6 入门教程",
           tags: ["ES6"],
@@ -553,8 +553,8 @@ const webLink = {
     },
     // 服务端
     {
-      name: "服务端",
-      data: [
+      title: "服务端",
+      children: [
         {
           title: "Hexo",
           tags: ["博客"],
@@ -580,9 +580,9 @@ const webLink = {
     },
     // 面试相关
     {
-      name: "面试相关",
+      title: "面试相关",
       icon: menuicon.interviewIcon,
-      data: [
+      children: [
         {
           title: "前端面试宝典",
           tips: "前端面试基础知识、面试准备、面试题~",
@@ -594,8 +594,8 @@ const webLink = {
 
     // 其他工具
     {
-      name: "其他",
-      data: [
+      title: "其他",
+      children: [
         {
           title: "datav-vue3",
           tips: "BI大屏的开源库",

@@ -20,7 +20,7 @@ const user = useUser();
 let findItem = (arr) => {
   let key = user.searchKey;
   let array = [];
-  arr.forEach((s) => {
+  arr?.forEach((s) => {
     if (
       s?.title?.includes(key) ||
       s?.tips?.includes(key) ||
@@ -38,17 +38,17 @@ let findArr = () => {
   DataArr.forEach((v) => {
     if (v?.children?.length) {
       v.children.forEach((s) => {
-        arr.push(...findItem(s.data));
+        s.children && arr.push(...findItem(s.children));
       });
     } else {
-      arr.push(...findItem(v.data));
+      arr.push(...findItem(v.children));
     }
   });
   console.log(arr);
   return [
     {
       name: "搜索结果",
-      data: arr,
+      children: arr,
     },
   ];
 };

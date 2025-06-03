@@ -13,7 +13,7 @@ let menuList = ref([]);
 onBeforeMount(() => {
   // 生成左侧菜单栏
   menuList.value = DataArr.map((v, i) => ({
-    label: v.name,
+    label: v.title,
     name: (i + 1).toString(),
     icon: v.icon || null,
   }));
