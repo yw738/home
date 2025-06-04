@@ -6,6 +6,12 @@ const linkData = {
       title: "常用推荐",
       children: [
         {
+          title: "在线调试",
+          tips: "调试VUE",
+          // img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/github.png",
+          url: "https://play.vuejs.org/",
+        },
+        {
           title: "Github",
           tips: "世界上最大的代码托管平台",
           img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/github.png",
