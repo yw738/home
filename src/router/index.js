@@ -8,7 +8,7 @@ const routes = [
   },
   {
     path: "/setJson",
-    component: () => import("@/pages/setJson.vue"),
+    component: () => import("@/pages/setPage/index.vue"),
     children: [],
   },
   // {
