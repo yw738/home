@@ -74,8 +74,9 @@ let gridOptions = ref({
       editRender: {
         name: "select",
         options: [
-          { label: "是", value: true },
-          { label: "否", value: false },
+          { label: "", value: "" },
+          { label: "隐藏", value: "true" },
+          { label: "显示", value: "false" },
         ],
       },
     },
@@ -119,10 +120,12 @@ onBeforeMount(() => {
       v.children.forEach((s) => {
         s["_X_ROW_KEY"] && delete s["_X_ROW_KEY"];
         s.tags && (s.tags = s.tags.join(","));
+        s?.private && (s.private = s.private.toString());
         if (s.children?.length) {
           s.children.forEach((p) => {
             p["_X_ROW_KEY"] && delete p["_X_ROW_KEY"];
-            p.tags && (p.tags = p.tags.join(","));
+            p?.tags && (p.tags = p.tags.join(","));
+            p?.private && (p.private = p.private.toString());
           });
         }
       });
@@ -210,10 +213,12 @@ let saveJs = () => {
       v.children.forEach((s) => {
         s["_X_ROW_KEY"] && delete s["_X_ROW_KEY"];
         s.tags && (s.tags = s.tags.split(","));
+        s?.private && (s.private == "false" ? s.private=false :s.private= true);
         if (s.children?.length) {
           s.children.forEach((p) => {
             p["_X_ROW_KEY"] && delete p["_X_ROW_KEY"];
-            p.tags && (p.tags = p.tags.split(","));
+            p?.tags && (p.tags = p.tags.split(","));
+            p?.private && (p.private == "false" ? p.private=false :p.private= true);
           });
         }
       });
