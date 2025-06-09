@@ -10,5 +10,6 @@ yarn test
 
 ## 更新
 ```
-
+新增管理json的界面
+http://localhost:3000/#/setJson
 ```
