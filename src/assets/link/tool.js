@@ -111,6 +111,11 @@ const linkData = {
           tips: "黑名单主站",
           url: "https://docs.qq.com/doc/DRWNoZnRnSXRRRUV2",
         },
+        {
+          title: "海外比价器",
+          tips: "对比海外金币价格",
+          url: "https://www.bijiaqi.com/",
+        },
       ],
     },
   ],
