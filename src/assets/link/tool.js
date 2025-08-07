@@ -6,6 +6,12 @@ const linkData = {
       title: "常用推荐",
       children: [
         {
+          title: "likefont",
+          tips: "寻找相似字体",
+          // img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/github.png",
+          url: "https://en.likefont.com/",
+        },
+        {
           title: "在线调试",
           tips: "调试VUE",
           // img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/github.png",
@@ -47,8 +53,8 @@ const linkData = {
           title: "羊羊&&缪崽",
           tips: "七夕纪念网站，记录羊羊和缪崽在一起的时间~",
           img: "https://cdn.jsdelivr.net/gh/yw738/hometc/img/yls.png",
-          url: "https://ylsandmls.vercel.app/",
-          private: true,
+          url: "https://yw738.github.io/ylsandmls/",
+          // private: true,
         },
         {
           title: "白描网页版",
