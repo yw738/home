@@ -4,6 +4,9 @@ export const useUser = defineStore("user", {
     isPrivate: false, //是否为私密模式 ，开启隐藏菜单
 
     searchKey: "",
+
+    menuList: [],
+    dataArr: [],
   }),
 
   getters: {},

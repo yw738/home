@@ -1,9 +1,9 @@
 /* 常用推荐 */
 const linkData = {
-  title: "常用推荐",
+  title: "热门推荐",
   children: [
     {
-      title: "常用推荐",
+      title: "常用",
       children: [
         {
           title: "likefont",
