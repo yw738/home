@@ -8,14 +8,9 @@ const routes = [
   },
   {
     path: "/setJson",
-    component: () => import("@/pages/admin/setPage/index.vue"),
+    component: () => import("@/pages/setPage/index.vue"),
     children: [],
   },
-  // {
-  //   path: "/priceiframe",
-  //   component: () => import("@/pages/Desktop/iframe/price.vue"),
-  //   children: [],
-  // },
 ];
 
 const router = createRouter({
