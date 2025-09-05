@@ -60,7 +60,7 @@ export const useUser = defineStore("user", {
         this.menuList = JSON.parse(arr2);
         return;
       }
-      init();
+      this.init();
     },
 
     /**
@@ -137,8 +137,7 @@ export const useUser = defineStore("user", {
         })
           .then((response) => response.json())
           .then((response) => {
-            const { data } = response;
-            resolve(data);
+            resolve(response);
           })
           .catch((error) => console.error("Error:", error));
       });

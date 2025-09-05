@@ -1,8 +1,6 @@
 <template>
   <div class="box">
-    <a-button type="primary" style="margin-right: 10px" @click="saveJs"
-      >保存</a-button
-    >
+    <a-button @click="init" style="margin-right: 20px">刷新</a-button>
     <a-button type="primary" @click="addItem">新增</a-button>
     <div style="margin: 10px 0 0 0">
       <vxe-grid v-bind="gridOptions" ref="gridRef">
@@ -10,25 +8,33 @@
           <span style="color: red">{{ row.title }}</span>
         </template>
         <template #action="params">
-          <a-button danger size="small" @click="edit(params, index)"
+          <a-button
+            size="small"
+            @click="edit(params.row, index)"
+            style="margin-right: 10px"
             >编辑</a-button
           >
-          <a-button danger size="small" @click="del(params, index)"
+          <a-button danger size="small" @click="del(params.row, index)"
             >删除</a-button
           >
         </template>
       </vxe-grid>
     </div>
+    <Add ref="addRefs" :cascaderData="cascaderData" />
   </div>
 </template>
 
 <script setup>
 import { nextTick, ref, onBeforeMount } from "vue";
-import tableList from "@/assets/public.js";
-import { exportDataToJSFile, deepCloneFn } from "./useHook.js";
+import { deepCloneFn } from "./useHook.js";
 import { useUser } from "@/store/user.js";
+import { Modal, message } from "ant-design-vue";
+import Add from "./add.vue";
+import { useRoute, useRouter } from "vue-router";
+const route = useRoute();
+const router = useRouter();
 const user = useUser();
-
+let addRefs = ref(null);
 let gridOptions = ref({
   border: true,
   treeConfig: {
@@ -54,6 +60,17 @@ let gridOptions = ref({
     {
       field: "private",
       title: "是否隐藏",
+      formatter({ cellValue, row, column }) {
+        // cellValue: 当前单元格的值
+        // row: 当前行数据
+        // column: 当前列配置
+        if (cellValue === 1) {
+          return "隐藏";
+        } else if (cellValue === 0) {
+          return "显示";
+        }
+        return "未知";
+      },
     },
     {
       field: "action",
@@ -81,81 +98,56 @@ let expandAllTreeEvent = (rows = []) => {
   }
 };
 
-let reload = (fn) => {
-  let rows = getList();
-  fn();
-  nextTick(() => expandAllTreeEvent(rows));
-};
+let cascaderData = ref([]);
 
-onBeforeMount(async () => {
+let init = async () => {
   let oldObj = deepCloneFn(gridOptions.value);
-  let arr = await user.init();
+  let arr = await user.init(true);
   oldObj.data = arr;
+  cascaderData.value = arr.map((v) => {
+    return {
+      value: v.id,
+      label: v.name,
+      children:
+        v?.children?.map((s) => {
+          return {
+            value: s.id,
+            label: s.name,
+          };
+        }) || [],
+    };
+  });
   gridOptions.value = oldObj;
+};
+onBeforeMount(async () => {
+  if (!user.token) {
+    router.replace("/");
+    return;
+  }
+  init();
 });
 
 let addItem = () => {
-  // let oldObj = deepCloneFn(gridOptions.value);
-  // oldObj.data.push({
-  //   title: "新增的",
-  //   children: [
-  //     {
-  //       title: "",
-  //       tags: "",
-  //       tips: "",
-  //       url: "",
-  //     },
-  //   ],
-  // });
-  // reload(() => {
-  //   gridOptions.value = oldObj;
-  // });
+  addRefs.value.init("add", {});
 };
-let edit = () => {};
+let edit = (row) => {
+  addRefs.value.init("edit", row);
+};
 
 let del = async (params) => {
-  let { seq, row, rowid, level } = params;
-  // console.log(params);
-  // const myData = deepCloneFn(gridOptions.value.data);
-  // let [i, j, l] = seq.split(".");
-
-  // if (level == 0) {
-  //   myData.splice(i - 1, 1);
-  // } else if (level == 1) {
-  //   let arr2 = myData[i - 1];
-  //   arr2.children.splice(j - 1, 1);
-  // } else if (level == 2) {
-  //   let arr2 = myData[i - 1].children[j - 1];
-  //   arr2.children.splice(l - 1, 1);
-  // }
-  // reload(() => {
-  //   gridOptions.value.data = myData;
-  // });
-};
-
-let saveJs = () => {
-  const myData = deepCloneFn(gridOptions.value.data);
-  myData.forEach((v) => {
-    if (v.children?.length) {
-      v["_X_ROW_KEY"] && delete v["_X_ROW_KEY"];
-      v.children.forEach((s) => {
-        s["_X_ROW_KEY"] && delete s["_X_ROW_KEY"];
-        s.tags && (s.tags = s.tags.split(","));
-        s?.private &&
-          (s.private == "false" ? (s.private = false) : (s.private = true));
-        if (s.children?.length) {
-          s.children.forEach((p) => {
-            p["_X_ROW_KEY"] && delete p["_X_ROW_KEY"];
-            p?.tags && (p.tags = p.tags.split(","));
-            p?.private &&
-              (p.private == "false" ? (p.private = false) : (p.private = true));
-          });
-        }
+  let { id } = params;
+  Modal.confirm({
+    title: "提示",
+    content: "该数据将被删除。确定删除吗？",
+    okText: "确定",
+    cancelText: "取消",
+    async onOk() {
+      user.del({ id }).then((res) => {
+        init();
       });
-    }
+    },
+    onCancel() {},
   });
-  console.log(myData);
-  exportDataToJSFile(myData, "users.js");
 };
 </script>
 <style scoped lang="less">
