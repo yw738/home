@@ -131,6 +131,7 @@ onBeforeMount(() => {
       });
     }
   });
+  debugger
   oldObj.data = tableList;
   gridOptions.value = oldObj;
 });

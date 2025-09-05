@@ -27,6 +27,14 @@ export const useUser = defineStore("user", {
     },
 
     getMenuList() {
+      let arr1 = sessionStorage.getItem("dataArr");
+      let arr2 = sessionStorage.getItem("menuList");
+      // 多次请求走 会话缓存
+      if (arr1 && arr2) {
+        this.dataArr = JSON.parse(arr1);
+        this.menuList = JSON.parse(arr2);
+        return;
+      }
       fetch(`${this.BASEAPI}/api/sites`, {
         method: "GET",
       })
@@ -41,6 +49,8 @@ export const useUser = defineStore("user", {
               name: (i + 1).toString(),
               icon: menuicon[v.img] || null,
             }));
+            sessionStorage.setItem("dataArr", JSON.stringify(this.dataArr));
+            sessionStorage.setItem("menuList", JSON.stringify(this.menuList));
           }
         })
         .catch((error) => console.error("Error:", error));

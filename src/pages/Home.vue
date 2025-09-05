@@ -13,7 +13,6 @@
 <script setup>
 import CardsBox from "@/components/CardsBox.vue";
 import { computed, defineComponent, ref, watch } from "vue";
-// import DataArr from "@/assets/public.js";
 import { useUser } from "@/store/user.js";
 const user = useUser();
 
