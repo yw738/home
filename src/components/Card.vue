@@ -5,7 +5,7 @@
         <img :src="item.img || defaultImg" />
       </div>
       <div style="width: calc(100% - 66px)">
-        <div>{{ item.title }}</div>
+        <div>{{ item.name }}</div>
         <p class="overflowClip_1">{{ item.tips }}</p>
       </div>
     </div>
@@ -13,7 +13,7 @@
       <div class="goto_box">
         <div class="tga text-xs py-1">
           <span>{{ tagName }}</span>
-          <span v-for="(v, i) in item.tags" :key="i">{{ v }}</span>
+          <span v-if="item.tags" v-for="(v, i) in item.tags.split(',')" :key="i">{{ v }}</span>
         </div>
 
         <div class="togo text-center text-muted is-views">

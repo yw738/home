@@ -8,10 +8,13 @@ import Layout from "@/components/Layout.vue";
 import DataArr from "@/assets/public.js";
 import { onBeforeMount, ref } from "vue";
 import menuicon from "@/assets/image/menuicon.js";
+import { useUser } from "@/store/user.js";
+const user = useUser();
 
 let menuList = ref([]);
 
 onBeforeMount(() => {
+  user.getMenuList()
   // 生成左侧菜单栏
   menuList.value = DataArr.map((v, i) => ({
     label: v.title,

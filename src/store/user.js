@@ -1,4 +1,6 @@
 import { defineStore } from "pinia";
+import menuicon from "@/assets/image/menuicon.js";
+
 export const useUser = defineStore("user", {
   state: () => ({
     isPrivate: false, //是否为私密模式 ，开启隐藏菜单
@@ -7,6 +9,7 @@ export const useUser = defineStore("user", {
 
     menuList: [],
     dataArr: [],
+    BASEAPI: "https://d1-tutorial.yff738751286.workers.dev",
   }),
 
   getters: {},
@@ -21,6 +24,26 @@ export const useUser = defineStore("user", {
      */
     setPrivate(boolean) {
       this.isPrivate = boolean;
+    },
+
+    getMenuList() {
+      fetch(`${this.BASEAPI}/api/sites`, {
+        method: "GET",
+      })
+        .then((response) => response.json())
+        .then((res) => {
+          let { data, success } = res;
+          if (success) {
+            let arr = list2Tree(data);
+            this.dataArr = arr[0].children;
+            this.menuList = this.dataArr.map((v, i) => ({
+              label: v.name,
+              name: (i + 1).toString(),
+              icon: menuicon[v.img] || null,
+            }));
+          }
+        })
+        .catch((error) => console.error("Error:", error));
     },
   },
 });

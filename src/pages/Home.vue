@@ -13,16 +13,17 @@
 <script setup>
 import CardsBox from "@/components/CardsBox.vue";
 import { computed, defineComponent, ref, watch } from "vue";
-import DataArr from "@/assets/public.js";
+// import DataArr from "@/assets/public.js";
 import { useUser } from "@/store/user.js";
 const user = useUser();
 
+let DataArr = computed(() => user.dataArr);
 let findItem = (arr) => {
   let key = user.searchKey;
   let array = [];
   arr?.forEach((s) => {
     if (
-      s?.title?.includes(key) ||
+      s?.name?.includes(key) ||
       s?.tips?.includes(key) ||
       s?.tag?.includes(key)
     ) {
@@ -35,7 +36,7 @@ let findItem = (arr) => {
 let findArr = () => {
   console.log(user.searchKey);
   let arr = [];
-  DataArr.forEach((v) => {
+  DataArr.value.forEach((v) => {
     if (v?.children?.length) {
       v.children.forEach((s) => {
         s.children && arr.push(...findItem(s.children));
@@ -55,7 +56,7 @@ let findArr = () => {
 
 let filterList = computed(() => {
   if (!user.searchKey) {
-    return DataArr;
+    return DataArr.value;
   } else {
     return findArr();
   }

@@ -55,16 +55,6 @@
                 />
               </div>
               <HeadMenu />
-              <!-- 顶部菜单 -->
-              <!-- <div class="menuItem">
-                <div
-                  v-for="(item, index) in navList"
-                  :key="index"
-                  @click="navClick(item)"
-                >
-                  {{ item.label }}
-                </div>
-              </div> -->
             </div>
             <!-- 右侧按钮 -->
             <div>
@@ -118,7 +108,7 @@ import {
   AppstoreOutlined,
   SearchOutlined,
 } from "@ant-design/icons-vue";
-import { defineComponent, ref, onBeforeMount } from "vue";
+import { defineComponent, ref, onBeforeMount, computed } from "vue";
 import { message } from "ant-design-vue";
 let collapsed = ref(window.innerWidth <= 1100 ? true : false);
 import { useUser } from "@/store/user.js";
@@ -137,18 +127,7 @@ onBeforeMount(() => {
   };
 });
 let selectedKeys = ref(["1"]);
-let props = defineProps({
-  // 侧边菜单
-  menuList: {
-    type: Array,
-    default: () => [],
-  },
-  // 头部菜单
-  navList: {
-    type: Array,
-    default: () => [],
-  },
-});
+let menuList = computed(() => user.menuList);
 
 /**
  * 侧边栏的点击事件

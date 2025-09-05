@@ -19,7 +19,7 @@
               >
                 <Card
                   style="width: 100%"
-                  :tagName="params.title"
+                  :tagName="params.name"
                   :item="item"
                 />
               </a-col>
@@ -34,7 +34,7 @@
         <div>
           <TagOutlined />
         </div>
-        <div>{{ params.title }}</div>
+        <div>{{ params.name }}</div>
       </div>
       <a-row :gutter="[30, 24]">
         <template v-for="(item, index) in params.children" :key="index">
@@ -47,7 +47,7 @@
             :sm="24"
             v-if="isPrivate || !item.private"
           >
-            <Card style="width: 100%" :tagName="params.title" :item="item" />
+            <Card style="width: 100%" :tagName="params.name" :item="item" />
           </a-col>
         </template>
       </a-row>

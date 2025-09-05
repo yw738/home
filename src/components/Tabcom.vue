@@ -44,7 +44,7 @@ let props = defineProps({
 });
 let comActive = ref(0);
 let headArr = computed(() => {
-  return props.tabHead.map((v) => v.title);
+  return props.tabHead.map((v) => v.name);
 });
 let emit = defineEmits(["update:active"]);
 let handClick = (index) => {
