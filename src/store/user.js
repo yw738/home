@@ -10,7 +10,8 @@ export const useUser = defineStore("user", {
 
     menuList: [],
     dataArr: [],
-    BASEAPI: "https://d1-tutorial.yff738751286.workers.dev",
+    // BASEAPI: "http://localhost:3003",
+    BASEAPI: "https://www.tubin.site/homeapi/",
   }),
 
   getters: {},
@@ -28,7 +29,7 @@ export const useUser = defineStore("user", {
     },
 
     init(isEdit = false) {
-      return fetch(`${this.BASEAPI}/api/sites`, {
+      return fetch(`${this.BASEAPI}/sApi/sites`, {
         method: "GET",
       })
         .then((response) => response.json())
@@ -52,14 +53,14 @@ export const useUser = defineStore("user", {
         .catch((error) => console.error("Error:", error));
     },
     getMenuList() {
-      let arr1 = sessionStorage.getItem("dataArr");
-      let arr2 = sessionStorage.getItem("menuList");
-      // 多次请求走 会话缓存
-      if (arr1 && arr2) {
-        this.dataArr = JSON.parse(arr1);
-        this.menuList = JSON.parse(arr2);
-        return;
-      }
+      // let arr1 = sessionStorage.getItem("dataArr");
+      // let arr2 = sessionStorage.getItem("menuList");
+      // // 多次请求走 会话缓存
+      // if (arr1 && arr2) {
+      //   this.dataArr = JSON.parse(arr1);
+      //   this.menuList = JSON.parse(arr2);
+      //   return;
+      // }
       this.init();
     },
 
@@ -74,7 +75,7 @@ export const useUser = defineStore("user", {
     login(userInfo = {}) {
       const { username, password } = userInfo;
       return new Promise((resolve, reject) => {
-        fetch(`${this.BASEAPI}/api/login`, {
+        fetch(`${this.BASEAPI}/sApi/login`, {
           method: "POST", // 或 POST、PUT 等
           headers: {
             "Content-Type": "application/json", // 根据需要添加
@@ -106,7 +107,7 @@ export const useUser = defineStore("user", {
         fetch(`${this.BASEAPI}/api/addsite`, {
           method: "POST", // 或 POST、PUT 等
           headers: {
-            Authorization: `Bearer ${token}`,
+            tk: `tb-${token}`,
             "Content-Type": "application/json", // 根据需要添加
           },
           body: JSON.stringify(params),
@@ -129,7 +130,7 @@ export const useUser = defineStore("user", {
         fetch(`${this.BASEAPI}/api/update`, {
           method: "POST", // 或 POST、PUT 等
           headers: {
-            Authorization: `Bearer ${token}`,
+            tk: `tb-${token}`,
             "Content-Type": "application/json", // 根据需要添加
           },
           body: JSON.stringify(params),
@@ -152,7 +153,7 @@ export const useUser = defineStore("user", {
         fetch(`${this.BASEAPI}/api/del`, {
           method: "POST", // 或 POST、PUT 等
           headers: {
-            Authorization: `Bearer ${token}`,
+            tk: `tb-${token}`,
             "Content-Type": "application/json", // 根据需要添加
           },
           body: JSON.stringify(params),
