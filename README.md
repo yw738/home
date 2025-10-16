@@ -12,4 +12,8 @@ yarn test
 ```
 新增管理json的界面
 http://localhost:3000/#/setJson
+
+
+2025-10-16
+菜单界面独立出去了
 ```

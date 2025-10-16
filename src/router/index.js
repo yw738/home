@@ -6,11 +6,6 @@ const routes = [
     component: () => import("@/pages/homepage.vue"),
     children: [],
   },
-  {
-    path: "/setJson",
-    component: () => import("@/pages/setPage/index.vue"),
-    children: [],
-  },
 ];
 
 const router = createRouter({
