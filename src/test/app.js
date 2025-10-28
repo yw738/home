@@ -1,6 +1,6 @@
 import axios from "axios";
 import { JSONFilePreset } from "lowdb/node";
-import list from "./../assets/public.js";
+let list = [];
 const defaultData = { posts: [] };
 const db = await JSONFilePreset("db.json", defaultData);
 

@@ -62,11 +62,12 @@
                 <PrivedButton />
               </div> -->
               <div class="search">
-                <!-- <search-outlined /> -->
                 <a-input-search
+                  style="width: 100%"
                   v-model:value="searchKey"
-                  placeholder="input search text"
+                  placeholder="输入关键字"
                   enter-button
+                  allow-clear
                   @search="handSearch"
                 />
               </div>
@@ -256,6 +257,7 @@ let searchFn = () => {
   justify-content: space-between;
   align-items: center;
   .search {
+    width: 400px;
     height: 28px;
     line-height: 28px;
     display: inline-block;
