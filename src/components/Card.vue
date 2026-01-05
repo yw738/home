@@ -36,7 +36,6 @@
 /**
  * 卡片
  */
-import { ref, defineComponent } from "vue";
 import { RightCircleOutlined } from "@ant-design/icons-vue";
 import defaultImg from "../assets/image/default.png";
 let props = defineProps({

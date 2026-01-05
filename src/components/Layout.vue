@@ -27,7 +27,7 @@
               class="anticon anticon-appstore custom_icon"
               v-html="item.icon"
             />
-            <appstore-outlined v-else />
+            <AppstoreOutlined v-else />
             <span>{{ item.label }}</span>
           </a-menu-item>
         </a-menu>
@@ -40,13 +40,13 @@
             <div class="header">
               <!-- 左侧菜单 -->
               <div>
-                <menu-unfold-outlined
+                <MenuUnfoldOutlined
                   style="font-size: 20px; margin-left: 16px"
                   v-if="collapsed"
                   class="trigger"
                   @click="() => (collapsed = !collapsed)"
                 />
-                <menu-fold-outlined
+                <MenuFoldOutlined
                   style="font-size: 20px; margin-left: 16px"
                   height="20px"
                   v-else
@@ -97,19 +97,13 @@
 import Home from "./../pages/Home.vue";
 import logo from "./../assets/image/logo.png";
 import logo2 from "./../assets/image/logo2.png";
-import PrivedButton from "./PrivedButton.vue";
 import HeadMenu from "./headMenu.vue";
 import {
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  DownOutlined,
   AppstoreOutlined,
-  SearchOutlined,
 } from "@ant-design/icons-vue";
-import { defineComponent, ref, onBeforeMount, computed } from "vue";
+import { ref, onBeforeMount, computed } from "vue";
 import { message } from "ant-design-vue";
 let collapsed = ref(window.innerWidth <= 1100 ? true : false);
 import { useUser } from "@/store/user.js";
@@ -140,20 +134,6 @@ let menuLinkFn = (index) => {
     // block: 'center', // 定义垂直方向的对齐， "start", "center", "end", 或 "nearest"之一。默认为 "start"
     // inline: 'nearest', // 定义水平方向的对齐， "start", "center", "end", 或 "nearest"之一。默认为 "nearest"
   });
-};
-/**
- * 顶部栏的点击事件
- * @param {object} item 定位的坐标
- */
-let navClick = (item) => {
-  if (item?.href) {
-    window.open(item?.href);
-  }
-};
-// 搜索的回调
-let searchFn = () => {
-  // console.log('点击搜索！')
-  message.info("开发中~");
 };
 </script>
 <style lang="less" scoped>

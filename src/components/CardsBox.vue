@@ -61,7 +61,7 @@
  */
 import Card from "./Card.vue";
 import { TagOutlined } from "@ant-design/icons-vue";
-import { defineComponent, ref, defineProps, computed } from "vue";
+import { ref, defineProps, computed } from "vue";
 import Tabcom from "@/components/Tabcom.vue";
 import { useUser } from "@/store/user.js";
 const user = useUser();

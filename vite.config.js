@@ -73,19 +73,11 @@ export default defineConfig({
     proxy: {
       "/devApi": {
         // target: "http://8.149.246.127:5209",
-        //target: "https://www.scspcba.cn/",
         target: "http://localhost:5209/",
         changeOrigin: true,
         ws: true,
         secure: false,
         rewrite: (path) => path.replace(new RegExp("^/devApi"), ""),
-      },
-      "/parseapi": {
-        target: "http://127.0.0.1:5210/",
-        changeOrigin: true,
-        ws: true,
-        secure: false,
-        rewrite: (path) => path.replace(new RegExp("^/parseapi"), ""),
       },
     },
   },
