@@ -37,9 +37,6 @@ export const useUser = defineStore("user", {
           let { data, success } = res;
           if (success) {
             let arr = list2Tree(data);
-            if (isEdit) {
-              return arr[0].children;
-            }
             this.dataArr = arr[0].children;
             this.menuList = this.dataArr.map((v, i) => ({
               label: v.name,
