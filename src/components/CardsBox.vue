@@ -28,14 +28,7 @@
       <a-row :gutter="[30, 24]">
         <template v-for="(item, index) in params.children" :key="index">
           <!-- item.private => 是否隐藏该卡片，设为私密卡片 -->
-          <a-col
-            :xxl="4"
-            :xl="6"
-            :lg="8"
-            :md="12"
-            :sm="24"
-            v-if="isPrivate || !item.private"
-          >
+          <a-col :xxl="4" :xl="6" :lg="8" :md="12" :sm="24">
             <Card style="width: 100%" :tagName="params.name" :item="item" />
           </a-col>
         </template>
