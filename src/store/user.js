@@ -11,7 +11,8 @@ export const useUser = defineStore("user", {
     menuList: [],
     dataArr: [],
     // BASEAPI: "http://localhost:3003",
-    BASEAPI: "https://www.tubin.site/homeapi/",
+    // BASEAPI: "https://www.tubin.site/homeapi/",
+    BASEAPI: "http://www.gamemojin.fun/homeapi/",
   }),
 
   getters: {},
