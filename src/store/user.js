@@ -12,7 +12,7 @@ export const useUser = defineStore("user", {
     dataArr: [],
     // BASEAPI: "http://localhost:3003",
     // BASEAPI: "https://www.tubin.site/homeapi/",
-    BASEAPI: "http://www.gamemojin.fun/homeapi/",
+    BASEAPI: "https://www.gamemojin.fun/homeapi/",
   }),
 
   getters: {},
